@@ -1,0 +1,300 @@
+.sectTwoCard {
+    -webkit-box-shadow: 0px 4px 8px -1px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 4px 8px -1px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 4px 8px -1px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    padding: 30px 0 62px 30px;
+    position: relative;
+    width: 100%;
+    max-width: 510px;
+    max-height: 305px;
+    margin: auto;
+}
+
+
+
+.sectTwoCardContent img {
+    position: absolute;
+}
+
+.img1 {
+    width: 20%;
+    bottom: -10px;
+    right: 50px;
+}
+
+.img2 {
+    width: 20%;
+    bottom: -10px;
+    right: 50px;
+}
+
+.img3 {
+    width: 60%;
+    right: 0;
+    bottom: 0;
+}
+
+.img4 {
+    width: 60%;
+    right: -45px;
+    bottom: 0;
+}
+
+.img5 {
+    width: 45%;
+    right: 10px;
+    bottom: 0;
+}
+
+.img6 {
+    width: 50%;
+    right: 0;
+    bottom: 20px;
+}
+
+.cardKnife1 {
+    width: 10%;
+}
+
+.sectTwoCardContent h3 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 34px;
+    color: #000;
+    margin-bottom: 15px;
+}
+
+.line {
+    width: 14%;
+    height: 2px;
+    background-color: #E8AA31;
+    margin-bottom: 30px;
+}
+
+.sectTwoCardContent ul {
+    list-style: none;
+}
+
+.sectTwoCardContent li {
+    position: relative;
+    padding-left: 15px;
+    margin-bottom: 10px;
+}
+
+.sectTwoCardContent li a {
+    font-size: 16px;
+    color: #000;
+    line-height: 34px;
+    font-weight: 500;
+}
+
+.sectTwoCardContent li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #E8AA31;
+    font-size: 1.2em;
+    line-height: 34px;
+    padding: 0;
+}
+
+// media
+
+
+
+@media only screen and (min-width:1200px) {
+    .sectTwoCardContent h3 {
+        font-size: 20px;
+    }
+
+    .sectTwoCardContent li a {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (min-width:1400px) {
+    .img1 {
+        width: 18%;
+    }
+
+    .img2 {
+        width: 18%;
+    }
+
+    .img3 {
+        width: 50%;
+    }
+
+    .img4 {
+        width: 50%;
+    }
+
+    .img5 {
+        width: 45%;
+    }
+
+    .img6 {
+        width: 50%;
+    }
+
+    .sectTwoCardContent h3 {
+        font-size: 24px;
+    }
+
+    .sectTwoCardContent li a {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width:1200px) {
+    .img1 {
+        width: 15%;
+    }
+
+    .img2 {
+        width: 15%;
+    }
+
+    .img3 {
+        width: 50%;
+    }
+
+    .img4 {
+        right: -60px;
+    }
+
+    .img5 {
+        width: 45%;
+    }
+
+    .img6 {
+        width: 40%;
+    }
+}
+
+@media only screen and (max-width:992px) {
+    .img1 {
+        width: 20%;
+    }
+
+    .img2 {
+        width: 20%;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .sectTwoCard {
+        padding-bottom: 70px;
+    }
+
+    .img1 {
+        transform: rotate(-90deg);
+        bottom: -40px;
+        right: 60px;
+    }
+
+    .img2 {
+        transform: rotate(80deg);
+        bottom: -40px;
+        left: 80px;
+    }
+
+    .img3 {
+        width: 40%;
+        transform: translateX(-50%) rotate(-35deg);
+        left: 50%;
+        bottom: -40px;
+    }
+
+    .img4 {
+        width: 40%;
+        bottom: 0px;
+        transform: translateX(-50%);
+        left: 50%;
+    }
+
+    .img5 {
+        transform: rotate(-50deg);
+        bottom: -10px;
+        right: 0px;
+        width: 60%;
+    }
+
+    .img6 {
+        width: 50%;
+        bottom: -10px;
+        right: 0;
+    }
+
+    .sectTwoCard {
+        min-height: 350px;
+    }
+}
+
+@media only screen and (max-width:575.9px) {
+    .sectTwoCard {
+        padding: 30px 0 62px 0;
+    }
+
+    .sectTwoCardContent h3 {
+        text-align: center;
+    }
+
+    .sectTwoCardContent .line {
+        margin: 0 auto 30px auto;
+    }
+
+    .sectTwoCardContent ul {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+  
+    }
+
+    .img1 {
+        bottom: -80px;
+    }
+
+    .img2 {
+        bottom: -60px;
+    }
+
+    .img3 {
+        bottom: -60px;
+        left: 40%;
+    }
+
+    .img4 {
+        bottom: -60px;
+    }
+
+    .img5 {
+        width: 45%;
+    }
+}
+
+@media only screen and (max-width:426px) {
+    .img1 {
+        bottom: -40px;
+    }
+
+    .img2 {
+        bottom: -40px;
+    }
+
+    .img3 {
+
+        bottom: -40px;
+    }
+
+    .img4 {
+
+        bottom: -20px;
+    }
+
+    .img5 {
+        width: 45%;
+
+    }
+}

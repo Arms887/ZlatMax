@@ -1,0 +1,113 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box !important;
+}
+
+.knifeCard {
+    box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+    padding: 21.63px 20px 30px 20px;
+    max-width: 370px;
+    min-width: 250px;
+    margin: auto;
+    margin-bottom: 66px;
+}
+
+.knifeCardsContent h4 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    color: #141414;
+}
+
+.knife {
+    width: 71%;
+    display: block;
+    margin: 0 auto 52px auto;
+}
+
+.size {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 11px;
+}
+
+.size p {
+    font-weight: 600;
+    line-height: 34px;
+    color: #ABABAB;
+}
+
+.valuation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.valuation p {
+    line-height: 34px;
+    color: #ABABAB;
+}
+
+.cardPrice {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.cardPrice h4 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    color: #141414;
+}
+
+.cardPrice span {
+    margin: 0 5px;
+}
+
+.cardScale {
+    display: flex;
+    gap: 15px;
+}
+
+.cardScale button {
+    background-color: transparent;
+    border: 0;
+}
+
+.rate li {
+    margin-inline-end: 3px !important;
+}
+
+
+@media only screen and (max-width: 1200px) {
+    .knifeCard {
+        max-width: 550px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+   
+
+    .rate li {
+        margin-inline-end: 6px !important;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .knifeCard {
+        margin: 10px auto;
+    }
+
+    .knifeCardText {
+        margin: 0 20px;
+    }
+
+    .knifeCard {
+        padding: 21.63px 0 0 0;
+    }
+}

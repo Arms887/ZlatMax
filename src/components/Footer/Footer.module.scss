@@ -1,0 +1,557 @@
+footer {
+    padding: 102px 0;
+    background-color: #141414;
+}
+
+.container {
+    width: 82%;
+    margin: auto;
+}
+
+footer .container {
+    max-width: 1575px;
+}
+
+.footerInformation {
+    display: flex;
+}
+
+.footerInformation ul {
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footerInformation h4 {
+    font-size: 18px;
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 23px;
+}
+
+.footerInformation ul li {
+    font-size: 18px;
+    color: #ffffffbb;
+    list-style: none;
+}
+
+.footerInform {
+    width: 234px;
+    margin-right: 53px;
+}
+
+.supportService {
+    width: 238px;
+    margin-right: 82px;
+}
+
+.additionally {
+    width: 254px;
+    margin-right: 105px;
+}
+
+.personalAccount {
+    width: 188px;
+}
+
+.footerLine {
+    width: 100%;
+    height: 1px;
+    margin: 30px 0;
+    background-color: #ffffff83;
+}
+
+.footerContact {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footerCont {
+    width: 204px;
+    margin-right: 110px;
+}
+
+.footerCont ul {
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footerCont h4 {
+    font-size: 18px;
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 23px;
+}
+
+.footerCont ul li {
+    font-size: 18px;
+    color: #ffffffbb;
+    list-style: none;
+}
+
+
+.footerCont li {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.footerCont li img {
+    margin-top: 6px;
+}
+
+.footerContCommunication {
+    display: flex;
+    gap: 13px;
+    margin-top: 31px;
+}
+
+.footerContCommunication img {
+    width: 40px;
+}
+
+
+.usefulLinks {
+    width: 269px;
+    margin-right: 111px;
+}
+
+.usefulLinks h4 {
+    font-size: 18px;
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 23px;
+}
+
+.usefulLinks span {
+    font-size: 18px;
+    color: #ffffffbb;
+}
+
+.ourGuarantee {
+    width: 313px;
+    margin-right: 125px;
+}
+
+.ourGuarantee h4 {
+    font-size: 18px;
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 23px;
+}
+
+.ourGuarantee p {
+    font-size: 18px;
+    color: #ffffffbb;
+}
+
+.ourGuarantee p span {
+    color: #E8AA31;
+}
+
+.newSletter {
+    width: 305px;
+}
+
+.newSletter h4 {
+    font-size: 18px;
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 23px;
+}
+
+.newSletter span {
+    font-size: 18px;
+    color: #ffffffbb;
+    margin-bottom: 26px;
+}
+
+.footerMailWrite {
+    padding: 10px 0 10px 10px;
+    background-color: #ffffff11;
+    outline: 0;
+    border-bottom-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border: 1px solid #ffffff7c;
+    color: #ffffffbb;
+    width: 100%;
+}
+
+.footerMail {
+    display: flex;
+    margin: 26px 0 22px 0;
+
+}
+
+.newSletter input::placeholder {
+    color: #ffffff7c;
+}
+
+
+.footerVector {
+    padding: 17px 20px;
+    background-color: #E8AA31;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: 0;
+    border: 0;
+    border-bottom-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.checkboxGroup {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.checkboxGroup input[type="checkbox"] {
+    position: relative;
+    margin-top: 6px;
+    border-radius: 2px;
+    background-color: #ffffff11;
+    border: 1px solid #ffffffbb;
+    width: 20px;
+    height: 20px;
+    appearance: none;
+    cursor: pointer;
+}
+
+
+
+
+.checkboxGroup input[type="checkbox"]:checked::after {
+    content: "✔";
+  color: #E8AA31;
+  font-size: 16px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  line-height: 1;
+  }
+
+.checkboxGroup label {
+    color: #ffffff;
+}
+
+
+.footerCode {
+    display: flex;
+    font-size: 14px;
+    color: #ffffffbb;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footerCodeText {
+    width: 817px;
+}
+
+.footerCode span {
+    line-height: 27px;
+}
+
+
+
+// media
+
+
+@media only screen and (min-width: 1400px) {
+
+    .footerCont {
+        margin-right: 84px;
+    }
+
+    .usefulLinks {
+        margin-right: 51px;
+    }
+
+    .ourGuarantee {
+        margin-right: 55px;
+    }
+
+}
+
+@media only screen and (min-width: 1550px) {
+    .footerInform {
+        margin-right: 83px;
+    }
+
+    .supportService {
+        margin-right: 102px;
+    }
+
+    .additionally {
+        margin-right: 135px;
+    }
+
+    .footerCont {
+        margin-right: 134px;
+    }
+
+    .usefulLinks {
+        margin-right: 81px;
+    }
+
+    .ourGuarantee {
+        margin-right: 85px;
+    }
+}
+
+@media only screen and (min-width: 1750px) {
+
+    .footerInform {
+        margin-right: 103px;
+    }
+
+    .supportService {
+        margin-right: 122px;
+    }
+
+    .additionally {
+        margin-right: 155px;
+    }
+
+    .newSletter {
+        width: 345px;
+    }
+
+    .footerCont {
+        margin-right: 154px;
+    }
+
+    .usefulLinks {
+        margin-right: 101px;
+    }
+
+    .ourGuarantee {
+        margin-right: 105px;
+    }
+
+}
+
+@media only screen and (min-width: 1900px) {
+
+    .footerInform {
+        margin-right: 133px;
+    }
+
+    .supportService {
+        margin-right: 152px;
+    }
+
+    .additionally {
+        margin-right: 185px;
+    }
+
+
+
+    .newSletter {
+        width: 375px;
+    }
+
+    .footerCont {
+        margin-right: 174px;
+    }
+
+    .usefulLinks {
+        margin-right: 121px;
+    }
+
+    .ourGuarantee {
+        margin-right: 125px;
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+
+    .footerInform {
+        width: 204px;
+        margin-right: 27px;
+    }
+
+    .supportService {
+        width: 228px;
+        margin-right: 41px;
+    }
+
+    .additionally {
+        width: 244px;
+        margin-right: 55px;
+    }
+
+    .footerCont {
+        margin-right: 35px;
+        width: 180px;
+    }
+
+    .footerContCommunication img {
+        width: 35px;
+    }
+
+    .usefulLinks {
+        margin-right: 16px;
+        width: 182px;
+    }
+
+    .ourGuarantee {
+        margin-right: 20px;
+        width: 278px;
+    }
+
+    .newSletter {
+        width: 270px;
+    }
+
+    .footerCodeText {
+        width: 717px;
+    }
+
+}
+
+@media only screen and (max-width: 1200px) {
+    .footerInformation {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .footerInform,
+    .supportService,
+    .additionally,
+    .personalAccount {
+        width: 47.5%;
+        margin: 0;
+        text-align: center;
+    }
+
+    .additionally,
+    .personalAccount {
+        margin-top: 60px;
+
+    }
+
+    .footerContact {
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+    }
+
+    .footerCont,
+    .usefulLinks,
+    .ourGuarantee {
+        width: 47.5%;
+        margin: 0;
+        text-align: center;
+    }
+
+    .newSletter {
+        width: 47.5%;
+        margin: 0;
+    }
+
+    .newSletter span {
+        display: block;
+    }
+
+    .newSletter h4,
+    .newSletter span {
+        text-align: center;
+    }
+
+
+    .footerCont li {
+        margin: auto;
+    }
+
+    .footerContCommunication {
+        justify-content: center;
+    }
+
+    .ourGuarantee,
+    .newSletter {
+        margin-top: 60px;
+    }
+
+    .ourGuarantee h4 {
+        margin-bottom: 30px;
+    }
+
+    .footerCodeText {
+        width: 517px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .footerCode {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    .footerInform,
+    .supportService,
+    .additionally,
+    .personalAccount {
+        width: 100%;
+        margin: 0;
+        text-align: center;
+    }
+
+    .supportService,
+    .additionally,
+    .personalAccount {
+        margin-top: 60px;
+    }
+
+    .footerCont,
+    .usefulLinks,
+    .ourGuarantee {
+        width: 100%;
+        margin: 0;
+        text-align: center;
+    }
+
+    .newSletter {
+        width: 100%;
+        margin: 0;
+    }
+
+    .usefulLinks,
+    .ourGuarantee,
+    .newSletter {
+        margin-top: 60px;
+    }
+
+    .footerCodeText {
+        width: 417px;
+    }
+
+   
+}
+
+@media only screen and (max-width: 576px) {
+    footer .container {
+        width: 81%;
+    }
+
+    .footerCodeText {
+        width: 100%;
+    }
+    .footerCode {
+        align-items: start;
+    }
+
+    .footerCode span {
+        margin: auto;
+    }
+
+}

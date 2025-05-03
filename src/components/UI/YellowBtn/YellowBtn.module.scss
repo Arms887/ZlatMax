@@ -1,0 +1,22 @@
+.mainBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 16px 0px;
+    width: 95% ;
+    margin: auto ;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    background-color: #E8AA31;
+    cursor: pointer;
+    color: #ffffff;
+    -webkit-box-shadow: 0px 4px 20px 0px rgba(272, 170, 49, 0.43);
+    -moz-box-shadow: 0px 4px 20px 0px rgba(272, 170, 49, 0.43);
+    box-shadow: 0px 4px 20px 0px rgba(272, 170, 49, 0.43);
+}
+@media only screen and (max-width: 576px) {
+   .mainBtn{
+    width: 100%;
+   }
+}

@@ -1,0 +1,38 @@
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 120px 0 60px 0;
+
+  .left h2 {
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 46px;
+    margin: 0;
+  }
+
+  .right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    a {
+      font-size: 18px;
+      font-weight: 600;
+      color: #8c8c8c8a;
+      text-decoration: none;
+      transition: color 0.3s;
+
+      &:hover {
+        color: #E8AA31;
+      }
+    }
+  }
+}
+// media
+@media only screen and (max-width:576px) {
+.sectionHeader{
+  flex-direction: column;
+}
+
+}

@@ -1,0 +1,155 @@
+{
+  "littleCards": [
+  {
+    "cardtext": "All About Knives: How to Choose the Right One",
+    "image": "./assets/img/Rectangle 42.png"
+  },
+  {
+    "cardtext": "How to Choose a Flashlight Properly",
+    "image": "./assets/img/Rectangle 43.png"
+  },
+  {
+    "cardtext": "Kitchen Knives for Housewives",
+    "image": "./assets/img/Rectangle 44.png"
+  },
+  {
+    "cardtext": "Kitchen Knives for Housewives",
+    "image": "./assets/img/Rectangle 45(1).png"
+  }
+],
+  "knifecards":[
+    {
+      "title": "Fox Knife",
+      "steel": "95х18",
+      "materials": "Walnut, Aluminum",
+      "reviews": 12,
+      "reviewsText": "reviews",
+      "price": 2719,
+      "currency": "RUB",
+      "image": "./assets/img/01s 1.png"
+    },
+    {
+      "title": "Fox Knife",
+      "steel": "95х18",
+      "materials": "Walnut, Aluminum",
+      "reviews": 12,
+      "reviewsText": "reviews",
+      "price": 2719,
+      "currency": "RUB",
+      "image": "./assets/img/01s 1.png"
+    },
+    {
+      "title": "Fox Knife",
+      "steel": "95х18",
+      "materials": "Walnut, Aluminum",
+      "reviews": 12,
+      "reviewsText": "reviews",
+      "price": 2719,
+      "currency": "RUB",
+      "image": "./assets/img/01s 1.png"
+    },
+    {
+      "title": "Fox Knife",
+      "steel": "95х18",
+      "materials": "Walnut, Aluminum",
+      "reviews": 12,
+      "reviewsText": "reviews",
+      "price": 2719,
+      "currency": "RUB",
+      "image": "./assets/img/01s 1.png"
+    }
+  ]
+,  
+  "cards": [
+  {
+    "title": "Knife Catalog",
+    "image": "./assets/img/knife1.png",
+    "items": ["Butchering", "Tourist", "Hunting"],
+    "imgClass": "img1"
+  },
+  {
+    "title": "Medium-Blade Weapons",
+    "image": "./assets/img/knife2.png",
+    "items": ["Butchering", "Tourist", "Hunting"],
+    "imgClass": "img2"
+  },
+  {
+    "title": "Long-Blade Weapons",
+    "image": "./assets/img/knife3.png",
+    "items": ["Butchering", "Tourist", "Hunting"],
+    "imgClass": "img3"
+  },
+  {
+    "title": "Souvenir Products",
+    "image": "./assets/img/knife4.png",
+    "items": ["Butchering", "Tourist", "Hunting"],
+    "imgClass": "img4"
+  },
+  {
+    "title": "Accessories",
+    "image": "./assets/img/knife5.png",
+    "items": ["Butchering", "Tourist", "Hunting"],
+    "imgClass": "img5"
+  },
+  {
+    "title": "Knife Workshop",
+    "image": "./assets/img/knife6.png",
+    "items": ["Butchering", "Tourist", "Hunting"],
+    "imgClass": "img6"
+  }
+],
+    "footer": {
+      "sections": {
+        "info": {
+          "title": "INFORMATION",
+          "items": [
+            "Zlatoust knives\nin Moscow and the Moscow region",
+            "Knife steels",
+            "About us",
+            "Payment and delivery terms",
+            "Privacy policy"
+          ]
+        },
+        "support": {
+          "title": "SUPPORT SERVICE",
+          "items": ["Contact Information", "Product Return", "Site Map"]
+        },
+        "additional": {
+          "title": "ADDITIONAL",
+          "items": ["Gift Certificates", "Partners", "Discounted Products"]
+        },
+        "account": {
+          "title": "MY ACCOUNT",
+          "items": ["Account", "Order History", "My Bookmarks", "Newsletter"]
+        }
+      },
+      "contact": {
+        "title": "CONTACTS",
+        "phone": "8 (800) 777-49-67",
+        "hours": "Mon–Fri 7:00 – 16:00 (MSK)",
+        "address": "Zlatoust, Shosseynaya St., 1, office “6B”",
+        "email": "info@zlatmax.ru"
+      },
+      "usefulLinks": {
+        "title": "USEFUL LINKS",
+        "item": "Payment and delivery options"
+      },
+      "guarantee": {
+        "title": "OUR GUARANTEE",
+        "text": "Not satisfied with your purchase?\nYou can return it within 30 days from the date of receipt, according to ",
+        "linkText": "our terms"
+      },
+      "newsletter": {
+        "title": "NEWSLETTER",
+        "subtitle": "Subscribe now!",
+        "placeholder": "example@gmail.com",
+        "agreement": "I have read and agree with the terms"
+      },
+      "disclaimer": {
+        "text": "All materials posted on the site are for informational purposes only and do not constitute a public offer as defined by Article 437 of the Civil Code of the Russian Federation. When copying materials, a hyperlink to www.zlatmax.ru is required!"
+      },
+      "copyright":
+        "Zlatoust knives www.zlatmax.ru ©"
+    }
+  }
+  

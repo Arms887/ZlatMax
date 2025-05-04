@@ -9,8 +9,8 @@ function Section2Cards({ title, imgsrc, items, imgClass }) {
                 <h3>{title}</h3>
                 <div className={styles.line}></div>
                 <ul>
-                    {items.map((item) => {
-                        return <li><a href="#">{item}</a></li>
+                    {items.map((item,index) => {
+                        return <li key={index}><a href="#">{item}</a></li>
                     })}
                 </ul>
                 <img src={imgsrc} alt={title} className={`${styles.cardImage} ${imgClass ? styles[imgClass] : ''}`} />

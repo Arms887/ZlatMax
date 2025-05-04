@@ -5,14 +5,28 @@ const ProgressLine = ({ total, current, onDotClick }) => {
   const containerRef = useRef(null);
   const [dotPositions, setDotPositions] = useState([]);
 
-  useEffect(() => {
+  const calculateDotPositions = () => {
     const container = containerRef.current;
     if (container) {
+      const containerLeft = container.getBoundingClientRect().left;
       const dots = Array.from(container.querySelectorAll(`.${styles.dotLineWrapper}`));
-      const positions = dots.map(dot => dot.offsetLeft + dot.offsetWidth / 2);
+      const positions = dots.map(dot => {
+        const rect = dot.getBoundingClientRect();
+        return rect.left + rect.width / 2 - containerLeft;
+      });
       setDotPositions(positions);
     }
+  };
+
+  useEffect(() => {
+    calculateDotPositions();
+    window.addEventListener('resize', calculateDotPositions);
+    return () => window.removeEventListener('resize', calculateDotPositions);
   }, [total]);
+
+  useEffect(() => {
+    calculateDotPositions();
+  }, [current]);
 
   return (
     <div className={styles.wrapper}>
@@ -31,7 +45,7 @@ const ProgressLine = ({ total, current, onDotClick }) => {
           <div
             className={styles.activeDot}
             style={{
-              transform: `translateX(${dotPositions[current] - 8}px)`, 
+              transform: `translateX(${dotPositions[current] - 6}px) translateY(-50%)`
             }}
           />
         )}
@@ -41,6 +55,3 @@ const ProgressLine = ({ total, current, onDotClick }) => {
 };
 
 export default ProgressLine;
-
-
-

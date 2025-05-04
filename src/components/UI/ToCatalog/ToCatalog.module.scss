@@ -1,0 +1,17 @@
+.right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    a {
+      font-size: 18px;
+      font-weight: 600;
+      color: #8c8c8c8a;
+      text-decoration: none;
+      transition: color 0.3s;
+
+      &:hover {
+        color: #E8AA31;
+      }
+    }
+  }

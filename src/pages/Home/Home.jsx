@@ -6,24 +6,40 @@ import Zagolovok from '../../components/Zagolovok/Zagolovok';
 import LittleCard from '../../components/LittleCard/LittleCard';
 import { useState, useRef } from 'react';
 import SliderMy from '../../components/Slider/Slider';
+import OtherSection from '../../components/OtherSection/OtherSection';
 import './../../i18n';
 import SectionLast from '../../components/SectionLast/SectionLast';
-
 function Home() {
     const { t, i18n } = useTranslation();
     const cards = t('cards', { returnObjects: true });
     const knifecardarr = t('knifecards', { returnObjects: true });
     const littlecards = t('littleCards', { returnObjects: true });
+    const heading = t('heading',{returnObjects: true});
+    const otherSection = t('toOtherSection',{returnObjects: true});
     const [currentSlide, setCurrentSlide] = useState(0);
     const sliderRef = useRef();
     const changeLanguage = (lng) => {
         i18n.changeLanguage(lng);
     };
-    const sliderSettings = {
+    const sliderSettingsFourCards = {
         dots: false,
         infinite: true,
         speed: 500,
         slidesToShow: 4,
+        slidesToScroll: 1,
+        gap: 15,
+        afterChange: (index) => setCurrentSlide(index),
+        responsive: [
+            { breakpoint: 1290, settings: { slidesToShow: 3 } },
+            { breakpoint: 1024, settings: { slidesToShow: 2 } },
+            { breakpoint: 600, settings: { slidesToShow: 1 } },
+        ],
+    };
+    const sliderSettingsThreeCards = {
+        dots: false,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 3,
         slidesToScroll: 1,
         gap: 15,
         afterChange: (index) => setCurrentSlide(index),
@@ -54,8 +70,8 @@ function Home() {
                             ))}
                         </Row></div>
                         <div>
-                            <Zagolovok title={"Хиты продаж"} linkText={"Перейти в каталог"} />
-                            <SliderMy importedarr={knifecardarr} />
+                            <Zagolovok title={heading.title2} linkText={heading.href} />
+                            <SliderMy importedarr={knifecardarr} slidesToShow={4}/>
                         </div>
                     </div>
                 </div>
@@ -65,10 +81,10 @@ function Home() {
                     <div className="container">
                         <div className={styles.sectionFourContent}>
                             <div>
-                                <Zagolovok title={"Акции"} linkText={"Перейти в каталог"} />
-                                <SliderMy importedarr={knifecardarr} /></div>
-                            <div><Zagolovok title={"Акции"} linkText={"Перейти в каталог"} />
-                                <SliderMy importedarr={knifecardarr} /></div>
+                                <Zagolovok title={heading.title} linkText={heading.href} />
+                                <SliderMy importedarr={knifecardarr} slidesToShow={4}/></div>
+                            <div><Zagolovok title={heading.title} linkText={heading.href} />
+                                <SliderMy importedarr={knifecardarr} slidesToShow={4}/></div>
                         </div>
                     </div>
                 </div>
@@ -78,10 +94,10 @@ function Home() {
                     <div className="container">
                         <div className={styles.sectionSixContent}>
                             <div>
-                                <Zagolovok title={"Акции"} linkText={"Перейти в каталог"} />
-                                <SliderMy importedarr={knifecardarr} /></div>
-                            <div><Zagolovok title={"Акции"} linkText={"Перейти в каталог"} />
-                                <SliderMy importedarr={knifecardarr} /></div>
+                                <Zagolovok title={heading.title} linkText={heading.href} />
+                                <SliderMy importedarr={knifecardarr} slidesToShow={4}/></div>
+                            <div><Zagolovok title={heading.title} linkText={heading.href} />
+                                <SliderMy importedarr={knifecardarr} slidesToShow={4}/></div>
                             <div>
                                 <Zagolovok title={"Наши статьи"} linkText={"Перейти в каталог"} />
                             </div>
@@ -99,6 +115,9 @@ function Home() {
                 </div>
             </section>
             <SectionLast />
+        <section>
+            <OtherSection content={otherSection} cardsContent={knifecardarr} sliderSettings={3}/>
+        </section>
         </div>
     );
 }

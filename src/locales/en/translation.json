@@ -150,6 +150,17 @@
       },
       "copyright":
         "Zlatoust knives www.zlatmax.ru ©"
-    }
+    },
+    "heading":{
+      "title": "Stocks",
+      "title2": "Hits",
+      "href": "Go to the catalog"
+    },
+    "toOtherSection": {
+  "title": "New Arrivals",
+  "text": "Welcome to the official website of ZLATMAX! Our store offers the widest selection of Zlatoust knives from Zlatoust Arms Factories and companies. We are official suppliers.",
+  "tocatalog": "More new arrivals"
+}
+
   }
   

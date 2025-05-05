@@ -18,51 +18,119 @@
   }
 ],
   "knifecards": [
-    {
-      "title": "Դանակ Աղվես",
-      "steel": "95х18",
-      "materials": "Ընկույզ, Ալյումին",
-      "rating": 5,
-      "reviews": 12,
-      "reviewsText": "կարծիքներ",
-      "price": 2719,
-      "currency": "ռուբլի",
-      "image": "./assets/img/01s 1.png"
-    },
-    {
-      "title": "Դանակ Աղվես",
-      "steel": "95х18",
-      "materials": "Ընկույզ, Ալյումին",
-      "rating": 5,
-      "reviews": 12,
-      "reviewsText": "կարծիքներ",
-      "price": 2719,
-      "currency": "ռուբլի",
-      "image": "./assets/img/01s 1.png"
-    },
-    {
-      "title": "Դանակ Աղվես",
-      "steel": "95х18",
-      "materials": "Ընկույզ, Ալյումին",
-      "rating": 5,
-      "reviews": 12,
-      "reviewsText": "կարծիքներ",
-      "price": 2719,
-      "currency": "ռուբլի",
-      "image": "./assets/img/01s 1.png"
-    },
-    {
-      "title": "Դանակ Աղվես",
-      "steel": "95х18",
-      "materials": "Ընկույզ, Ալյումին",
-      "rating": 5,
-      "reviews": 12,
-      "reviewsText": "կարծիքներ",
-      "price": 2719,
-      "currency": "ռուբլի",
-      "image": "./assets/img/01s 1.png"
-    }
-  ],
+  {
+    "title": "Դանակ «Գազել»",
+    "steel": "D2",
+    "materials": "Բեժի փայտ",
+    "rating": 5,
+    "reviews": 21,
+    "reviewsText": "կարծիքներ",
+    "price": 5840,
+    "currency": "ռուբլի",
+    "image": "./assets/img/01s 1.png"
+  },
+  {
+    "title": "Դանակ Սկաուտ Pro",
+    "steel": "95Х18",
+    "materials": "Բնական փայտ, Բրոնզ",
+    "rating": 4,
+    "reviews": 18,
+    "reviewsText": "կարծիքներ",
+    "price": 4790,
+    "currency": "ռուբլի",
+    "image": "./assets/img/01s 1.png"
+  },
+  {
+    "title": "Դանակ Black",
+    "steel": "ЭИ-107",
+    "materials": "G10 պլաստիկ, Ռետին",
+    "rating": 5,
+    "reviews": 34,
+    "reviewsText": "կարծիքներ",
+    "price": 6150,
+    "currency": "ռուբլի",
+    "image": "./assets/img/01s 1.png"
+  },
+  {
+    "title": "Դանակ «Мини»",
+    "steel": "AUS-8",
+    "materials": "Մետաղ",
+    "rating": 3,
+    "reviews": 8,
+    "reviewsText": "կարծիքներ",
+    "price": 2490,
+    "currency": "ռուբլի",
+    "image": "./assets/img/01s 1.png"
+  },
+  {
+    "title": "Դանակ Փրկարար",
+    "steel": "440C",
+    "materials": "Ռետինե բռնակ",
+    "rating": 5,
+    "reviews": 19,
+    "reviewsText": "կարծիքներ",
+    "price": 6990,
+    "currency": "ռուբլի",
+    "image": "./assets/img/01s 1.png"
+  },
+  {
+    "title": "Դանակ «Витязь»",
+    "steel": "У8А",
+    "materials": "Խառնված պողպատ",
+    "rating": 4,
+    "reviews": 27,
+    "reviewsText": "կարծիքներ",
+    "price": 5390,
+    "currency": "ռուբլի",
+    "image": "./assets/img/01s 1.png"
+  }
+],
+  "lights": [
+  {
+    "title": "Ֆոնարիկ Tracker X1",
+    "steel": "Ալյումինե կորպուս",
+    "materials": "LED Cree",
+    "rating": 5,
+    "reviews": 18,
+    "reviewsText": "կարծիքներ",
+    "price": 4390,
+    "currency": "ռուբլի",
+    "image": "./assets/img/117430435_images_13765658881 1.png"
+  },
+  {
+    "title": "Ֆոնարիկ Ultra T6",
+    "steel": "Ալյումինե կորպուս",
+    "materials": "LED T6",
+    "rating": 4,
+    "reviews": 25,
+    "reviewsText": "կարծիքներ",
+    "price": 3290,
+    "currency": "ռուբլի",
+    "image": "./assets/img/117430435_images_13765658881 1.png"
+  },
+  {
+    "title": "Ֆոնարիկ Tactical Pro",
+    "steel": "Ալյումինե կորպուս",
+    "materials": "LED XML",
+    "rating": 5,
+    "reviews": 32,
+    "reviewsText": "կարծիքներ",
+    "price": 4990,
+    "currency": "ռուբլի",
+    "image": "./assets/img/117430435_images_13765658881 1.png"
+  },
+  {
+    "title": "Ֆոնարիկ MiniZoom",
+    "steel": "Պլաստիկ+ալյումին",
+    "materials": "LED",
+    "rating": 4,
+    "reviews": 14,
+    "reviewsText": "կարծիքներ",
+    "price": 1890,
+    "currency": "ռուբլի",
+    "image": "./assets/img/117430435_images_13765658881 1.png"
+  }
+],
   "cards": [
     {
       "title": "Դանակների կատալոգ",
@@ -193,12 +261,18 @@
   "heading":{
     "title": "Ակցիաներ",
     "title2": "Հիթեր",
+    "title3": "Ֆոնարիկներ",
     "href": "Գնալ գրացուցակ"
   },
   "toOtherSection": {
   "title": "Նորություններ",
   "text": "Բարի գալուստ «ԶԼԱՏՄԱԿՍ»-ի պաշտոնական կայք: Մեր խանութում ներկայացված է Զլատոուստի զինագործական գործարանների և ընկերությունների դանակների ամենալայն ընտրանին: Մենք պաշտոնական մատակարարներ ենք։",
   "tocatalog": "Ավելին նորություններից"
+},
+"lastSection": {
+  "title": "Զլատոուստի դանակներ «ԶԼԱՏՄԱՔՍ» ինտերնետ-խանութում",
+  "text": "Մեր «ԶԼԱՏՄԱՔՍ» ինտերնետ-խանութը Ձեզ է առաջարկում բարձր որակի դանակներ զինագործների քաղաքից՝ Զլատոուստից։ Զլատոուստի դանակները հայտնի և սիրված են թե՛ ռուսաստանյան, թե՛ արտասահմանյան շուկայում. որսորդական, կենցաղային, տուրիստական, ձկնորսական, ծալովի և նետվող դանակներ։ Զլատոուստի դանակը հուսալի ընկեր է թե՛ առօրյայում, թե՛ ծայրահեղ իրավիճակներում։ Շատ ապրանքների վրա տրամադրվում է մինչև 10 տարվա երաշխիք՝ դա որակի գլխավոր ցուցիչներից է։ Մեր կայքում՝ zlatmax-ում, Ձեզ է ներկայացված Զլատոուստի դանակների լայն տեսականի։ Մեր մենեջերները կօգնեն ընտրել լավագույն տարբերակը՝ հաշվի առնելով Ձեր նախասիրությունները։"
 }
+
 
 }

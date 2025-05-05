@@ -17,52 +17,121 @@
       "image": "./assets/img/Rectangle 45(1).png"
     }
   ],
-  "knifecards": [
-    {
-      "title": "Нож Лиса",
-      "steel": "95х18",
-      "materials": "Орех, Алюминий",
-      "rating": 5,
-      "reviews": 12,
-      "reviewsText": "отзывов",
-      "price": 2719,
-      "currency": "р.",
-      "image": "./assets/img/01s 1.png"
-    },
-    {
-      "title": "Нож Лиса",
-      "steel": "95х18",
-      "materials": "Орех, Алюминий",
-      "rating": 5,
-      "reviews": 12,
-      "reviewsText": "отзывов",
-      "price": 2719,
-      "currency": "р.",
-      "image": "./assets/img/01s 1.png"
-    },
-    {
-      "title": "Нож Лиса",
-      "steel": "95х18",
-      "materials": "Орех, Алюминий",
-      "rating": 5,
-      "reviews": 12,
-      "reviewsText": "отзывов",
-      "price": 2719,
-      "currency": "р.",
-      "image": "./assets/img/01s 1.png"
-    },
-    {
-      "title": "Нож Лиса",
-      "steel": "95х18",
-      "materials": "Орех, Алюминий",
-      "rating": 5,
-      "reviews": 12,
-      "reviewsText": "отзывов",
-      "price": 2719,
-      "currency": "р.",
-      "image": "./assets/img/01s 1.png"
-    }
-  ],
+"knifecards": [
+  {
+    "title": "Охотничий нож «Газель»",
+    "steel": "D2",
+    "materials": "Бежевое дерево, Стальной гарда",
+    "rating": 5,
+    "reviews": 21,
+    "reviewsText": "отзывов",
+    "price": 5840,
+    "currency": "рублей",
+    "image": "./assets/img/01s 1.png"
+  },
+  {
+    "title": "Нож Скаут Pro",
+    "steel": "95Х18",
+    "materials": "Натуральное дерево, Бронза",
+    "rating": 4,
+    "reviews": 18,
+    "reviewsText": "отзывов",
+    "price": 4790,
+    "currency": "рублей",
+    "image": "./assets/img/01s 1.png"
+  },
+  {
+    "title": "Тактический нож Black",
+    "steel": "ЭИ-107",
+    "materials": "Пластик G10, Резина",
+    "rating": 5,
+    "reviews": 34,
+    "reviewsText": "отзывов",
+    "price": 6150,
+    "currency": "рублей",
+    "image": "./assets/img/01s 1.png"
+  },
+  {
+    "title": "Нож «Мини»",
+    "steel": "AUS-8",
+    "materials": "Металл",
+    "rating": 3,
+    "reviews": 8,
+    "reviewsText": "отзывов",
+    "price": 2490,
+    "currency": "рублей",
+    "image": "./assets/img/01s 1.png"
+  },
+  {
+    "title": "Нож «Спасатель»",
+    "steel": "440C",
+    "materials": "Резиновая рукоятка",
+    "rating": 5,
+    "reviews": 19,
+    "reviewsText": "отзывов",
+    "price": 6990,
+    "currency": "рублей",
+    "image": "./assets/img/01s 1.png"
+  },
+  {
+    "title": "Военный нож «Витязь»",
+    "steel": "У8А",
+    "materials": "Закалённая сталь",
+    "rating": 4,
+    "reviews": 27,
+    "reviewsText": "отзывов",
+    "price": 5390,
+    "currency": "рублей",
+    "image": "./assets/img/01s 1.png"
+  }
+]
+,
+  "lights": [
+  {
+    "title": "Фонарик Tracker X1",
+    "steel": "Алюминиевый корпус",
+    "materials": "LED Cree",
+    "rating": 5,
+    "reviews": 18,
+    "reviewsText": "отзывов",
+    "price": 4390,
+    "currency": "руб.",
+    "image": "./assets/img/117430435_images_13765658881 1.png"
+  },
+  {
+    "title": "Фонарик UltraBeam T6",
+    "steel": "Алюминиевый корпус",
+    "materials": "LED T6",
+    "rating": 4,
+    "reviews": 25,
+    "reviewsText": "отзывов",
+    "price": 3290,
+    "currency": "руб.",
+    "image": "./assets/img/117430435_images_13765658881 1.png"
+  },
+  {
+    "title": "Фонарик Tactical Pro",
+    "steel": "Алюминиевый корпус",
+    "materials": "LED XML",
+    "rating": 5,
+    "reviews": 32,
+    "reviewsText": "отзывов",
+    "price": 4990,
+    "currency": "руб.",
+    "image": "./assets/img/117430435_images_13765658881 1.png"
+  },
+  {
+    "title": "Фонарик MiniZoom",
+    "steel": "Пластик + алюминий",
+    "materials": "LED, батарейки AAA",
+    "rating": 4,
+    "reviews": 14,
+    "reviewsText": "отзывов",
+    "price": 1890,
+    "currency": "руб.",
+    "image": "./assets/img/117430435_images_13765658881 1.png"
+  }
+],
   "cards": [
     {
       "title": "Каталог ножей",
@@ -193,11 +262,16 @@
   "heading": {
     "title": "Акции",
     "title2": "Хиты",
+    "title3": "Фонари",
     "href": "Перейти в каталог"
   },
   "toOtherSection": {
     "title": "Новинки",
     "text": "Добро пожаловать на официальный сайт «ЗЛАТМАКС»! В нашем магазине представлен наиболее широкий выбор Златоустовских ножей от Златоустовских Оружейных Фабрик и компаний, мы являемся официальными поставщиками.",
     "tocatalog": "Больше новинок"
+  },
+  "lastSection":{
+"title": "Златоустовские ножи интернет-магазин 'ЗЛАТМАКС' ",
+"text": "Наш интернет-магазин 'ЗЛАТМАКС' предлагает Вам ножи очень высокого качества из города оружейников - Златоуста. Златоустовские ножи известны и популярны среди потребителей как на российским рынке, так и за рубежом: ножи охотничьи, хозяйственные, туристические, рыбацкие, складные и метательные. Нож Златоуста - это идеальный друг и товарищ в повседневной жизни и в экстремальных ситуациях. На многую продукцию распространяется гарантия до 10 лет - это один из главных показателей качества. Для Вас на нашем сайте 'zlatmax' предложен огромный ассортимент Златоустовских ножей. Наши менеджеры помогут определиться и подобрать самый лучший Златоустовский нож, ориентируясь на Ваши пожелания."
   }
 }

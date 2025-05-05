@@ -17,49 +17,122 @@
     "image": "./assets/img/Rectangle 45(1).png"
   }
 ],
-  "knifecards":[
-    {
-      "title": "Fox Knife",
-      "steel": "95х18",
-      "materials": "Walnut, Aluminum",
-      "reviews": 12,
-      "reviewsText": "reviews",
-      "price": 2719,
-      "currency": "RUB",
-      "image": "./assets/img/01s 1.png"
-    },
-    {
-      "title": "Fox Knife",
-      "steel": "95х18",
-      "materials": "Walnut, Aluminum",
-      "reviews": 12,
-      "reviewsText": "reviews",
-      "price": 2719,
-      "currency": "RUB",
-      "image": "./assets/img/01s 1.png"
-    },
-    {
-      "title": "Fox Knife",
-      "steel": "95х18",
-      "materials": "Walnut, Aluminum",
-      "reviews": 12,
-      "reviewsText": "reviews",
-      "price": 2719,
-      "currency": "RUB",
-      "image": "./assets/img/01s 1.png"
-    },
-    {
-      "title": "Fox Knife",
-      "steel": "95х18",
-      "materials": "Walnut, Aluminum",
-      "reviews": 12,
-      "reviewsText": "reviews",
-      "price": 2719,
-      "currency": "RUB",
-      "image": "./assets/img/01s 1.png"
-    }
-  ]
+ "knifecards": [
+  {
+    "title": "Hunting Knife 'Gazelle'",
+    "steel": "D2",
+    "materials": "Beige wood, Steel guard",
+    "rating": 5,
+    "reviews": 21,
+    "reviewsText": "reviews",
+    "price": 5840,
+    "currency": "RUB",
+    "image": "./assets/img/01s 1.png"
+  },
+  {
+    "title": "Scout Pro Knife",
+    "steel": "95Х18",
+    "materials": "Natural wood, Bronze",
+    "rating": 4,
+    "reviews": 18,
+    "reviewsText": "reviews",
+    "price": 4790,
+    "currency": "RUB",
+    "image": "./assets/img/01s 1.png"
+  },
+  {
+    "title": "Tactical Knife Black",
+    "steel": "EI-107",
+    "materials": "G10 plastic, Rubber",
+    "rating": 5,
+    "reviews": 34,
+    "reviewsText": "reviews",
+    "price": 6150,
+    "currency": "RUB",
+    "image": "./assets/img/01s 1.png"
+  },
+  {
+    "title": "Everyday Knife 'Mini'",
+    "steel": "AUS-8",
+    "materials": "Plastic coating, Metal",
+    "rating": 3,
+    "reviews": 8,
+    "reviewsText": "reviews",
+    "price": 2490,
+    "currency": "RUB",
+    "image": "./assets/img/01s 1.png"
+  },
+  {
+    "title": "Special Knife 'Rescuer'",
+    "steel": "440C",
+    "materials": "Rubber handle",
+    "rating": 5,
+    "reviews": 19,
+    "reviewsText": "reviews",
+    "price": 6990,
+    "currency": "RUB",
+    "image": "./assets/img/01s 1.png"
+  },
+  {
+    "title": "Military Knife 'Vityaz'",
+    "steel": "U8A",
+    "materials": "Black wood, Hardened steel",
+    "rating": 4,
+    "reviews": 27,
+    "reviewsText": "reviews",
+    "price": 5390,
+    "currency": "RUB",
+    "image": "./assets/img/01s 1.png"
+  }
+]
 ,  
+"lights": [
+  {
+    "title": "Flashlight Tracker X1",
+    "steel": "Aluminum body",
+    "materials": "LED Cree, Lithium battery",
+    "rating": 5,
+    "reviews": 18,
+    "reviewsText": "reviews",
+    "price": 4390,
+    "currency": "RUB",
+    "image": "./assets/img/117430435_images_13765658881 1.png"
+  },
+  {
+    "title": "Flashlight UltraBeam T6",
+    "steel": "Aluminum body",
+    "materials": "LED T6, 18650 battery",
+    "rating": 4,
+    "reviews": 25,
+    "reviewsText": "reviews",
+    "price": 3290,
+    "currency": "RUB",
+    "image": "./assets/img/117430435_images_13765658881 1.png"
+  },
+  {
+    "title": "Flashlight Tactical Pro",
+    "steel": "Aluminum body",
+    "materials": "LED XML, Waterproof IPX6",
+    "rating": 5,
+    "reviews": 32,
+    "reviewsText": "reviews",
+    "price": 4990,
+    "currency": "RUB",
+    "image": "./assets/img/117430435_images_13765658881 1.png"
+  },
+  {
+    "title": "Flashlight MiniZoom",
+    "steel": "Plastic + aluminum",
+    "materials": "LED, AAA batteries",
+    "rating": 4,
+    "reviews": 14,
+    "reviewsText": "reviews",
+    "price": 1890,
+    "currency": "RUB",
+    "image": "./assets/img/117430435_images_13765658881 1.png"
+  }
+]
+,
   "cards": [
   {
     "title": "Knife Catalog",
@@ -154,13 +227,19 @@
     "heading":{
       "title": "Stocks",
       "title2": "Hits",
+      "title3": "Lights",
       "href": "Go to the catalog"
     },
     "toOtherSection": {
   "title": "New Arrivals",
   "text": "Welcome to the official website of ZLATMAX! Our store offers the widest selection of Zlatoust knives from Zlatoust Arms Factories and companies. We are official suppliers.",
   "tocatalog": "More new arrivals"
+},
+"lastSection": {
+  "title": "Zlatoust Knives Online Store 'ZLATMAKS'",
+  "text": "Our online store 'ZLATMAKS' offers you high-quality knives from the city of gunsmiths – Zlatoust. Zlatoust knives are well-known and popular among customers both in the Russian market and abroad: hunting knives, utility knives, tourist knives, fishing knives, folding and throwing knives. A Zlatoust knife is the perfect companion in everyday life and extreme situations. Many of our products come with a warranty of up to 10 years – this is one of the main indicators of quality. On our website 'zlatmax', you will find a huge selection of Zlatoust knives. Our managers will help you choose the best Zlatoust knife based on your preferences."
 }
+
 
   }
   

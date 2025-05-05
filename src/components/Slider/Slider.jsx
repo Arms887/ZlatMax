@@ -9,7 +9,6 @@ import './../../i18n';
 function SliderMy({ importedarr ,slidesToShow}) {
     const [currentSlide, setCurrentSlide] = useState(0);
     const sliderRef = useRef();
-
     const sliderSettings = {
         dots: false,
         infinite: true,
@@ -17,11 +16,12 @@ function SliderMy({ importedarr ,slidesToShow}) {
         slidesToShow,
         slidesToScroll: 1,
         gap: 15,
+        arrows: false,
         afterChange: index => setCurrentSlide(index),
         responsive: [
             { breakpoint: 1290, settings: { slidesToShow: 3 } },
             { breakpoint: 1024, settings: { slidesToShow: 2 } },
-            { breakpoint: 600, settings: { slidesToShow: 1 } },
+            { breakpoint: 709, settings: { slidesToShow: 1 } },
         ],
     };
 

@@ -1,0 +1,72 @@
+.OtherSection {
+    position: relative;
+    background-image: url('./../../../public/assets/img/751 2.png'); // путь из public
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 60px 0;
+    color: white;
+    overflow: hidden;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+      
+        background: linear-gradient(to top, rgba(0, 0, 0, 1.4), rgba(0, 0, 0, 0.2));
+        backdrop-filter: brightness(0.8); 
+    }
+}
+.OtherSectionText{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 30px;
+}
+.OtherSectionText p:nth-child(1){
+    font-size: 30px;
+    color: #ffffff;
+    font-weight: 500;
+}
+.OtherSectionText p:nth-child(2){
+    font-size: 18px;
+    color: #ffffff;
+    margin-bottom: 30px;
+    font-weight: 200;
+}
+.OtherSectionContent {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.OtherSectionCol,
+.OtherSectionText{
+    @media (max-width: 1200px) {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+    }
+}
+
+.sliderCub  {
+    // width: 1000px;
+
+    @media (max-width: 1200px) {
+        width: 800px;
+    }
+
+    @media (max-width: 992px) {
+        width: 100%;
+    }
+
+    @media (max-width: 576px) {
+        width: 100%;
+    }
+}

@@ -59,11 +59,13 @@ function Footer() {
                                 <ul>
                                     {section.line.map((item, i) => (
                                         <li key={i}>
-                                            {item.split('\n').map((line, ix) => (
-                                                <span key={ix}>
-                                                    {line}<br />
-                                                </span>
-                                            ))}
+                                            <a href="#">
+                                                {item.split('\n').map((line, ix) => (
+                                                    <span key={ix}>
+                                                        {line}
+                                                    </span>
+                                                ))}
+                                            </a>
                                         </li>
                                     ))}
                                 </ul>
@@ -77,16 +79,24 @@ function Footer() {
                         <div className={styles.footerCont}>
                             <h4>{t("footer.contact.title")}</h4>
                             <ul>
-                                <li><img src="/assets/img/footerVector1.svg" alt="phone" /><span>{t("footer.contact.phone")}</span></li>
-                                <li><img src="/assets/img/footerVector2.svg" alt="working hours" /><span>{t("footer.contact.hours")}</span></li>
-                                <li><img src="/assets/img/footerVector3.svg" alt="address" /><span>{t("footer.contact.address")}</span></li>
-                                <li><img src="/assets/img/footerVector4.svg" alt="email" /><span>{t("footer.contact.email")}</span></li>
+                                <a href="#"><li><img src="/assets/img/footerVector1.svg" alt="phone" /><span>{t("footer.contact.phone")}</span></li></a>
+                                <a href="#"><li><img src="/assets/img/footerVector2.svg" alt="working hours" /><span>{t("footer.contact.hours")}</span></li></a>
+                                <a href="#"><li><img src="/assets/img/footerVector3.svg" alt="address" /><span>{t("footer.contact.address")}</span></li></a>
+                                <a href="#"><li><img src="/assets/img/footerVector4.svg" alt="email" /><span>{t("footer.contact.email")}</span></li></a>
                             </ul>
                             <div className={styles.footerContCommunication}>
-                                <img src="/assets/img/facebook.svg" alt="Facebook icon" />
-                                <img src="/assets/img/viber.png" alt="Viber icon" />
-                                <img src="/assets/img/telegram.png" alt="Telegram icon" />
-                                <img src="/assets/img/whatsapp.png" alt="WhatsApp icon" />
+                                <a href="https://www.facebook.com/" target='_blank'>
+                                    <img src="/assets/img/facebook.svg" alt="Facebook icon" />
+                                </a>
+                                <a href="https://www.viber.com/ru/" target='_blank'>
+                                    <img src="/assets/img/viber.png" alt="Viber icon" />
+                                </a>
+                                <a href="https://web.telegram.org/" target='_blank'>
+                                    <img src="/assets/img/telegram.png" alt="Telegram icon" />
+                                </a>
+                                <a href="https://web.whatsapp.com/" target='_blank'>
+                                    <img src="/assets/img/whatsapp.png" alt="WhatsApp icon" />
+                                </a>
                             </div>
                         </div>
 

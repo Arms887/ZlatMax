@@ -16,6 +16,8 @@ function Home() {
     const littlecards = t('littleCards', { returnObjects: true });
     const heading = t('heading',{returnObjects: true});
     const otherSection = t('toOtherSection',{returnObjects: true});
+    const lastSection = t('lastSection',{returnObjects: true});
+    const lights = t('lights', { returnObjects: true });
     const [currentSlide, setCurrentSlide] = useState(0);
     const sliderRef = useRef();
     const changeLanguage = (lng) => {
@@ -75,6 +77,7 @@ function Home() {
                         </div>
                     </div>
                 </div>
+                <OtherSection content={otherSection} cardsContent={knifecardarr} sliderSettings={3}/>
             </section>
             <section className={styles.sectionFour}>
                 <div className={styles.sectionFourMainBlock}>
@@ -87,6 +90,7 @@ function Home() {
                                 <SliderMy importedarr={knifecardarr} slidesToShow={4}/></div>
                         </div>
                     </div>
+                    <OtherSection content={otherSection} cardsContent={knifecardarr} sliderSettings={3}/>
                 </div>
             </section>
             <section className={styles.sectionSix}>
@@ -110,14 +114,15 @@ function Home() {
                                     ))}
                                 </Row>
                             </div>
+                            <div>
+                            <Zagolovok title={heading.title3} linkText={heading.href} />
+                            <SliderMy importedarr={lights} slidesToShow={4}/>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <SectionLast />
-        <section>
-            <OtherSection content={otherSection} cardsContent={knifecardarr} sliderSettings={3}/>
-        </section>
+            <SectionLast title={lastSection.title} description={lastSection.text}/>
         </div>
     );
 }

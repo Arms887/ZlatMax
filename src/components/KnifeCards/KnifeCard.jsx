@@ -2,8 +2,7 @@ import styles from './KnifeCards.module.scss';
 import { Rate } from 'antd';
 import YellowBtn from '../UI/YellowBtn/YellowBtn';
 import { useState } from "react";
-
-function KnifeCards({ title, steel, materials, reviews, reviewstext, price, currency, imgsrc }) {
+function KnifeCards({showComparision,btnName,onAddToCart,title, steel, materials, reviews, reviewstext, price, currency, imgsrc }) {
   const [isActive, setIsActive] = useState(false);
   return (
     <div className={styles.knifeCard}>
@@ -24,7 +23,7 @@ function KnifeCards({ title, steel, materials, reviews, reviewstext, price, curr
             <div className={styles.cardPrice}>
               <h4>{price}<span>{currency}</span></h4>
               <div className={styles.cardScale}>
-                <button>
+                <button onClick={showComparision}>
                   <img src="./../assets/img/Vector (22).png" alt="nema" />
                 </button>
                 <svg
@@ -46,9 +45,10 @@ function KnifeCards({ title, steel, materials, reviews, reviewstext, price, curr
           </div>
 
         </div>
-        <form>
+        
           <YellowBtn
-            btnName="В корзину"
+          onClick={onAddToCart}
+            btnName={btnName}
             icon={
               <svg
                 width="19"
@@ -75,7 +75,7 @@ function KnifeCards({ title, steel, materials, reviews, reviewstext, price, curr
               </svg>
             }
           />
-        </form>
+       
       </div>
     </div>
   );

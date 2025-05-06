@@ -17,8 +17,24 @@
     "image": "./assets/img/Rectangle 45(1).png"
   }
 ],
+"lightLittleCards": [
+  {
+    "title": "Tactical Flashlights",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+    "image": "./assets/img/351 1.png",
+    "btntext": "Read more"
+  },
+  {
+    "title": "Tactical Flashlights",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+    "image": "./assets/img/fish_fonar 1.png",
+    "btntext": "Read more"
+  }
+]
+,
  "knifecards": [
   {
+    "id": 1,
     "title": "Hunting Knife 'Gazelle'",
     "steel": "D2",
     "materials": "Beige wood, Steel guard",
@@ -30,6 +46,7 @@
     "image": "./assets/img/01s 1.png"
   },
   {
+    "id": 2,
     "title": "Scout Pro Knife",
     "steel": "95Х18",
     "materials": "Natural wood, Bronze",
@@ -41,6 +58,7 @@
     "image": "./assets/img/01s 1.png"
   },
   {
+    "id": 3,
     "title": "Tactical Knife Black",
     "steel": "EI-107",
     "materials": "G10 plastic, Rubber",
@@ -52,6 +70,7 @@
     "image": "./assets/img/01s 1.png"
   },
   {
+    "id": 4,
     "title": "Everyday Knife 'Mini'",
     "steel": "AUS-8",
     "materials": "Plastic coating, Metal",
@@ -63,6 +82,7 @@
     "image": "./assets/img/01s 1.png"
   },
   {
+    "id": 5,
     "title": "Special Knife 'Rescuer'",
     "steel": "440C",
     "materials": "Rubber handle",
@@ -74,9 +94,10 @@
     "image": "./assets/img/01s 1.png"
   },
   {
+    "id": 6,
     "title": "Military Knife 'Vityaz'",
     "steel": "U8A",
-    "materials": "Black wood, Hardened steel",
+    "materials": "Black wood",
     "rating": 4,
     "reviews": 27,
     "reviewsText": "reviews",
@@ -88,9 +109,10 @@
 ,  
 "lights": [
   {
+    "id": 7,
     "title": "Flashlight Tracker X1",
     "steel": "Aluminum body",
-    "materials": "LED Cree, Lithium battery",
+    "materials": "LED Cree",
     "rating": 5,
     "reviews": 18,
     "reviewsText": "reviews",
@@ -99,9 +121,10 @@
     "image": "./assets/img/117430435_images_13765658881 1.png"
   },
   {
+    "id": 8,
     "title": "Flashlight UltraBeam T6",
     "steel": "Aluminum body",
-    "materials": "LED T6, 18650 battery",
+    "materials": "LED T6",
     "rating": 4,
     "reviews": 25,
     "reviewsText": "reviews",
@@ -110,9 +133,10 @@
     "image": "./assets/img/117430435_images_13765658881 1.png"
   },
   {
+    "id": 9,
     "title": "Flashlight Tactical Pro",
     "steel": "Aluminum body",
-    "materials": "LED XML, Waterproof IPX6",
+    "materials": "LED XML",
     "rating": 5,
     "reviews": 32,
     "reviewsText": "reviews",
@@ -121,8 +145,9 @@
     "image": "./assets/img/117430435_images_13765658881 1.png"
   },
   {
+    "id": 10,
     "title": "Flashlight MiniZoom",
-    "steel": "Plastic + aluminum",
+    "steel": "Plastic",
     "materials": "LED, AAA batteries",
     "rating": 4,
     "reviews": 14,
@@ -238,6 +263,81 @@
 "lastSection": {
   "title": "Zlatoust Knives Online Store 'ZLATMAKS'",
   "text": "Our online store 'ZLATMAKS' offers you high-quality knives from the city of gunsmiths – Zlatoust. Zlatoust knives are well-known and popular among customers both in the Russian market and abroad: hunting knives, utility knives, tourist knives, fishing knives, folding and throwing knives. A Zlatoust knife is the perfect companion in everyday life and extreme situations. Many of our products come with a warranty of up to 10 years – this is one of the main indicators of quality. On our website 'zlatmax', you will find a huge selection of Zlatoust knives. Our managers will help you choose the best Zlatoust knife based on your preferences."
+},
+"btntext":"Add to Cart",
+"add":"Item successfully added to cart",
+"adderror":"The item has already been added.",
+"remove":"The item was successfully removed from the basket.",
+"menu": {
+  "catalog": "Knife Catalog",
+  "blades": "Bladed Weapons",
+  "souvenirs": "Souvenir Products",
+  "flashlights": "ARMYTEK Flashlights",
+  "accessories": "Accessories",
+  "categories": {
+    "title": "Knife Categories",
+    "items": [
+      "Butcher Knives",
+      "Tourist Knives",
+      "Hunting Knives",
+      "Bulat Knives",
+      "Damascus Knives",
+      "Tactical Knives",
+      "Throwing Knives",
+      "Machetes and Kukri",
+      "Kitchen Knives"
+    ]
+  },
+  "manufacturers": {
+    "title": "Knife Manufacturers",
+    "items": [
+      "AiR Knives",
+      "ZIK Knives",
+      "EZOSS Knives",
+      "Rosoruzhie Knives",
+      "Oruzheynik Knives",
+      "Sergey Baranov's Bulat",
+      "Andrey Umerov's Bulat",
+      "Zlatko Knives",
+      "Stil-M Knives",
+      "Weapons Company"
+    ]
+  },
+  "steel": {
+    "title": "Knives by Steel Grade",
+    "items": [
+      "40X102S2M",
+      "95X18",
+      "100X13M",
+      "110X18M-SHD",
+      "EI-107 TC",
+      "50X14MF",
+      "AUS-8",
+      "K340",
+      "M390",
+      "EP-766"
+    ]
+  },
+  "sharpening": {
+    "title": "Knife Sharpening & Polishing",
+    "items": [
+      "GOI Paste",
+      "Diamond Paste",
+      "Stones and Whetstones",
+      "Sharpening Systems"
+    ]
+  },
+  "workshop": {
+    "title": "Knife Workshop",
+    "items": [
+      "Knife Blades",
+      "Knife Blanks",
+      "Knife Casting",
+      "Handle Materials",
+      "Handle Care"
+    ]
+  },
+  "view_all": "View All"
 }
 
 

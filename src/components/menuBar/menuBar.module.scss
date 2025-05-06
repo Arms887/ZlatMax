@@ -1,0 +1,102 @@
+.menuBar {
+    background-color: #111;
+    color: white;
+    font-family: sans-serif;
+    @media only screen and (max-width: 1100px) {
+
+       display: none;
+    
+    }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+    position: relative;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 50px;
+    position: relative;
+}
+
+.menuItem {
+    font-size: 18px;
+    position: relative;
+    cursor: pointer;
+    color: #ffffff;
+    white-space: nowrap;
+    padding: 24px 0;
+    border-bottom: 2px solid transparent;
+    transition: all 0.5s ease;
+}
+
+.menuItem:hover {
+    border-bottom: 2px solid #E8AA31;
+    color: #E8AA31;
+}
+
+.menuItem:hover .submenu {
+    display: flex;
+}
+
+.submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #141414;
+    padding: 16px;
+    display: none;
+    gap: 2rem;
+    z-index: 100;
+    flex-wrap: wrap;
+    margin-top: 2px;
+    caret-color: transparent;
+}
+
+.submenuGroup {
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.submenuTitle {
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    font-size: 16px;
+}
+
+.submenuTitle ul {
+    list-style: none !important;
+}
+
+.submenuItem a {
+    color: #ffffff;
+    border-bottom: 1px solid transparent;
+    font-size: 16px;
+}
+
+.submenuItem a:hover {
+    color: #ffffff;
+    border-bottom: 1px solid #E8AA31;
+}
+
+.submenuItem {
+    color: #ccc;
+    padding: 0.2rem 0;
+    cursor: pointer;
+    list-style: none;
+    transition: color 0.3s;
+}
+
+.submenuItem:hover {
+    color: #E8AA31;
+}
+.viewAll{
+ color: red($color: #000000);
+}

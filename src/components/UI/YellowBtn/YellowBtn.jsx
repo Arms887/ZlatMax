@@ -1,8 +1,8 @@
 import styles from './YellowBtn.module.scss';
-function YellowBtn({btnName,icon}) {
+function YellowBtn({btnName,icon,onClick}) {
     return (
 <div>
-    <button className={styles.mainBtn}><p>{btnName}</p><span>{icon}</span></button>
+    <button onClick={onClick} className={styles.mainBtn}><p>{btnName}</p><span>{icon}</span></button>
 </div>
    
     );

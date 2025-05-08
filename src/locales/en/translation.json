@@ -338,8 +338,30 @@
     ]
   },
   "view_all": "View All"
-}
-
-
+},
+"infoCards": [
+  {
+    "text": "100% money-back guarantee",
+    "imgsrc": "/assets/img/Group 73.png"
+  },
+  {
+    "text": "Delivery to Russia, Kazakhstan, and Belarus",
+    "imgsrc": "/assets/img/Group (12).png"
+  },
+  {
+    "text": "Option to place an order without registration",
+    "imgsrc": "/assets/img/Group 66.png"
+  },
+  {
+    "text": "Discounts for regular customers",
+    "imgsrc": "/assets/img/Group 71.png"
+  }
+],
+"firstSectionTexts":{
+  "infoCardTitle": "Online store of certified ",
+  "infoCardTitleSpan": "Zlatoust knives",
+  "infoCardsText": "Welcome to the official website of ZLATMAX! Our store offers the widest selection of Zlatoust knives from Zlatoust weapon factories and companies. We are official suppliers."
+},
+"FirstSectionBtn":"More"
   }
   

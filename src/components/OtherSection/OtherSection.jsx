@@ -2,7 +2,7 @@ import style from './OtherSection.module.scss'
 import ToCatalog from '../UI/ToCatalog/ToCatalog';
 import SliderMy from '../Slider/Slider';
 import { Row, Col } from 'antd';
-const OtherSection = ({btnName,content,cardsContent,sliderSettings,showFunction = () => {},showComparision = () =>{}} ) => {
+const OtherSection = ({btnName,content,cardsContent,sliderSettings,showLikes = () => {},showFunction = () => {},showComparision = () =>{}} ) => {
     return (
         <div className={style.OtherSection}>
           <div className="container">
@@ -16,7 +16,7 @@ const OtherSection = ({btnName,content,cardsContent,sliderSettings,showFunction 
               </Col>
               <Col xs={24} xl={18} lg={24} md={24} className={style.OtherSectionCol}>
                 <div className={style.sliderCub}>
-                  <SliderMy btnName={btnName} importedarr={cardsContent} slidesToShow={sliderSettings} showComparision={showComparision} showFunction={showFunction}/>
+                  <SliderMy btnName={btnName} importedarr={cardsContent} slidesToShow={sliderSettings} showLikes={showLikes} showComparision={showComparision} showFunction={showFunction}/>
                 </div>
               </Col>
             </Row>

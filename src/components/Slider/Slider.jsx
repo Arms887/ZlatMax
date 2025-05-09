@@ -5,7 +5,7 @@ import ProgressLine from '../../components/ProgressLine/ProgressLine';
 import KnifeCards from '../KnifeCards/KnifeCard';
 import './../../i18n';
 
-function SliderMy({btnName,importedarr, slidesToShow, showFunction = () => {},showComparision = () => {} }) {
+function SliderMy({btnName,importedarr, slidesToShow, showFunction = () => {},showLikes = () => {},showComparision = () => {} }) {
   const [currentSlide, setCurrentSlide] = useState(0);
   const sliderRef = useRef();
 
@@ -31,6 +31,7 @@ function SliderMy({btnName,importedarr, slidesToShow, showFunction = () => {},sh
         {importedarr.map((item, index) => (
           <div key={index}>
             <KnifeCards
+            showLikes={() =>showLikes(item.id)}
             btnName={btnName}
               onAddToCart={() => showFunction(item.id)}
               showComparision={() => showComparision(item.id)}

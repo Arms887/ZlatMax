@@ -27,37 +27,50 @@ function Home() {
     i18n.changeLanguage(lng);
   };
   const [messageApi, contextHolder] = message.useMessage();
-  const [cart, setCart] = useState([]);
-  const [visible, setVisible] = useState(false);
-  const success = () => {
+  const [cartVisible, setCartVisible] = useState(false);
+  const [likesVisible, setLikesVisible] = useState(false);
+  const success = (success) => {
     messageApi.open({
       type: 'success',
-      content: t('add'),
+      content: success,
     });
   };
-  const error = () => {
+  const error = (error) => {
     messageApi.open({
       type: 'error',
-      content: t('adderror'),
+      content: error,
     });
   };
-  const warning = () => {
+  const warning = (remove) => {
     messageApi.open({
       type: 'warning',
-      content: t('remove'),
+      content: remove,
     });
   };
+  const [cart, setCart] = useState(() => {
+    const storedCart = localStorage.getItem('cart');
+    return storedCart ? JSON.parse(storedCart) : [];
+  });
+  
   function handleAddToCart(itemId) {
     if (!cart.includes(itemId)) {
-      setCart((prev) => [...prev, itemId]);
-      success();
+      const updatedCart = [...cart, itemId];
+      setCart(updatedCart);
+      localStorage.setItem('cart', JSON.stringify(updatedCart));
+      success(t('add'));
     } else {
-      error();
+      error(t('adderror'));
     }
+  }
+  const handleRemoveFromCart = (itemId) => {
+    const updatedCart = cart.filter((id) => id !== itemId);
+    setCart(updatedCart);
+    localStorage.setItem('cart', JSON.stringify(updatedCart)); 
+    warning(t('remove')); 
   };
+  // Comparison
   const [comparison, setComparison] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
-
   const comparisonFunction = (itemId) => {
     setComparison((prev) => {
       if (prev.includes(itemId)) return prev;
@@ -65,7 +78,6 @@ function Home() {
       return prev;
     });
   };
-
   useEffect(() => {
     if (comparison.length === 2) {
       setIsModalOpen(true);
@@ -76,23 +88,55 @@ function Home() {
     setIsModalOpen(false);
     setComparison([]);
   };
-  const handleRemoveFromCart = (itemId) => {
-    setCart((prev) => prev.filter((id) => id !== itemId));
-    warning();
+
+  // Comparison
+  // const [like, setLike] = useState([]);
+  // function handleAddToLike(itemId) {
+  //   if (!like.includes(itemId)) {
+  //     setLike((prev) => [...prev, itemId]);
+  //     success();
+  //   } else {
+  //     error();
+  //   }
+  // };
+  
+  const [like, setLike] = useState(() => {
+    const storedLikes = localStorage.getItem('likes');
+    return storedLikes ? JSON.parse(storedLikes) : [];
+  });
+  
+  function handleAddToLike(itemId) {
+    if (!like.includes(itemId)) {
+      const updatedLikes = [...like, itemId];
+      setLike(updatedLikes);
+      localStorage.setItem('likes', JSON.stringify(updatedLikes)); 
+      success(t('addToLikes'));
+    } else {
+      error(t('errorLikes'));
+    }
+  }
+
+
+
+  const handleRemoveFromLikes = (itemId) => {
+    const updatedLikes = like.filter((id) => id !== itemId);
+    setLike(updatedLikes);
+    localStorage.setItem('likes', JSON.stringify(updatedLikes)); 
+    warning(t('removeFromLikes')); 
   };
+
+  const likeItems = useMemo(() => {
+    const combinedLikeItems = [...knifecardarr, ...lights];
+
+    return combinedLikeItems.filter((item) => like.includes(Number(item.id)));
+  }, [like, knifecardarr, lights]);
+
   const cartItems = useMemo(() => {
     const combinedItems = [...knifecardarr, ...lights];
 
     return combinedItems.filter((item) => cart.includes(Number(item.id)));
   }, [cart, knifecardarr, lights]);
 
-  const showDrawer = () => {
-    setVisible(true);
-  };
-
-  const onClose = () => {
-    setVisible(false);
-  };
 
   return (
     <div>
@@ -101,8 +145,11 @@ function Home() {
         <button onClick={() => changeLanguage('en')}>English</button>
         <button onClick={() => changeLanguage('ru')}>Русскый</button>
         <button onClick={() => changeLanguage('am')}>Հայերեն</button>
-        <Button type="primary" onClick={showDrawer}>
+        <Button type="primary" onClick={() => setCartVisible(true)}>
           Корзина ({cart.length})
+        </Button>
+        <Button type="primary" onClick={() => setLikesVisible(true)}>
+          Likes ({like.length})
         </Button>
       </div>
       <Modal
@@ -126,8 +173,8 @@ function Home() {
       <Drawer
         title="Корзина"
         placement="right"
-        onClose={onClose}
-        visible={visible}
+        onClose={() => setCartVisible(false)}
+        open={cartVisible}
         width={400}
       >
         <List
@@ -148,6 +195,32 @@ function Home() {
           )}
         />
         {cartItems.length === 0 && <p>Корзина пуста.</p>}
+      </Drawer>
+      <Drawer
+        title="likes"
+        placement="right"
+        onClose={() => setLikesVisible(false)}
+        open={likesVisible}
+        width={400}
+      >
+        <List
+          dataSource={likeItems}
+          renderItem={(item) => (
+            <List.Item
+              actions={[
+                <Button type="link" onClick={() => handleRemoveFromLikes(item.id)}>
+                  Удалить
+                </Button>,
+              ]}
+            >
+              <List.Item.Meta
+                title={item.title}
+                description={`Цена: ${item.price} ${item.currency}`}
+              />
+            </List.Item>
+          )}
+        />
+        {likeItems.length === 0 && <p>Корзина пуста.</p>}
       </Drawer>
       <MenuBar />
       <section>
@@ -170,11 +243,11 @@ function Home() {
             </Row></div>
             <div>
               <Zagolovok title={heading.title2} linkText={heading.href} />
-              <SliderMy btnName={buttontext} importedarr={knifecardarr} slidesToShow={4} showFunction={handleAddToCart} showComparision={comparisonFunction} />
+              <SliderMy btnName={buttontext} importedarr={knifecardarr} slidesToShow={4} showLikes={handleAddToLike} showFunction={handleAddToCart} showComparision={comparisonFunction} />
             </div>
           </div>
         </div>
-        <OtherSection btnName={buttontext} content={otherSection} cardsContent={knifecardarr} sliderSettings={3} showFunction={handleAddToCart} showComparision={comparisonFunction} />
+        <OtherSection btnName={buttontext} content={otherSection} cardsContent={knifecardarr} sliderSettings={3} showLikes={handleAddToLike} showFunction={handleAddToCart} showComparision={comparisonFunction} />
       </section>
       <section className={styles.sectionFour}>
         <div className={styles.sectionFourMainBlock}>
@@ -182,9 +255,9 @@ function Home() {
             <div className={styles.sectionFourContent}>
               <div>
                 <Zagolovok title={heading.title} linkText={heading.href} />
-                <SliderMy btnName={buttontext} importedarr={knifecardarr} slidesToShow={4} showComparision={comparisonFunction} showFunction={handleAddToCart} /></div>
+                <SliderMy btnName={buttontext} importedarr={knifecardarr} slidesToShow={4} showLikes={handleAddToLike} showComparision={comparisonFunction} showFunction={handleAddToCart} /></div>
               <div><Zagolovok title={heading.title} linkText={heading.href} />
-                <SliderMy btnName={buttontext} importedarr={knifecardarr} slidesToShow={4} showComparision={comparisonFunction} showFunction={handleAddToCart} /></div>
+                <SliderMy btnName={buttontext} importedarr={knifecardarr} slidesToShow={4} showLikes={handleAddToLike} showComparision={comparisonFunction} showFunction={handleAddToCart} /></div>
             </div>
           </div>
           <OtherSection btnName={buttontext} content={otherSection} cardsContent={knifecardarr} sliderSettings={3} showFunction={handleAddToCart} showComparision={comparisonFunction} />
@@ -196,9 +269,9 @@ function Home() {
             <div className={styles.sectionSixContent}>
               <div>
                 <Zagolovok title={heading.title} linkText={heading.href} />
-                <SliderMy btnName={buttontext} importedarr={knifecardarr} slidesToShow={4} showFunction={handleAddToCart} /></div>
+                <SliderMy btnName={buttontext} importedarr={knifecardarr} slidesToShow={4} showLikes={handleAddToLike} showFunction={handleAddToCart} /></div>
               <div><Zagolovok title={heading.title} linkText={heading.href} />
-                <SliderMy btnName={buttontext} importedarr={knifecardarr} slidesToShow={4} showFunction={handleAddToCart} /></div>
+                <SliderMy btnName={buttontext} importedarr={knifecardarr} slidesToShow={4} showLikes={handleAddToLike} showFunction={handleAddToCart} /></div>
               <div>
                 <Zagolovok title={"Наши статьи"} linkText={"Перейти в каталог"} />
               </div>
@@ -234,7 +307,7 @@ function Home() {
                   </Row>
                 </div>
                 <Zagolovok title={heading.title3} linkText={heading.href} />
-                <SliderMy btnName={buttontext} importedarr={lights} slidesToShow={4} showFunction={handleAddToCart} />
+                <SliderMy btnName={buttontext} importedarr={lights} slidesToShow={4} showLikes={handleAddToLike} showFunction={handleAddToCart} />
               </div>
             </div>
           </div>

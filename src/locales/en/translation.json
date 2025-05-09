@@ -1,4 +1,25 @@
 {
+    "header": {
+      "about": "About Us",
+      "payment": "Payment & Delivery",
+      "news": "News",
+      "contacts": "Contacts",
+      "personal": "Personal Account",
+      "searchPlaceholder": "Search",
+      "city": "Moscow",
+      "call": "Request a Call",
+      "order": "Place Order",
+      "catalog": "Product Catalog",
+      "alt": {
+        "phone": "phone",
+        "profile": "profile",
+        "heart": "favorites",
+        "cart": "cart",
+        "logo": "logo",
+        "location": "location",
+        "arrow": "down"
+      }
+    },  
   "littleCards": [
   {
     "cardtext": "All About Knives: How to Choose the Right One",
@@ -268,6 +289,9 @@
 "add":"Item successfully added to cart",
 "adderror":"The item has already been added.",
 "remove":"The item was successfully removed from the basket.",
+"addToLikes": "Item added to favorites",
+"errorLikes": "This item is already in favorites",
+"removeFromLikes": "Item removed from favorites",
 "menu": {
   "catalog": "Knife Catalog",
   "blades": "Bladed Weapons",

@@ -3,12 +3,10 @@ import YellowBtn from '../UI/YellowBtn/YellowBtn';
 import InfoComponent from '../InfoComponent/InfoComponent';
 import { useTranslation } from 'react-i18next';
 import { Row, Col } from 'antd';
-function FirstSection({ }) {
+function FirstSection() {
     const {t} = useTranslation();
     const infoCards = t('infoCards' , { returnObjects: true });
-    const firstSectionTexts = t('firstSectionTexts' , { returnObjects: true });
-    console.log(infoCards);
-    
+    const firstSectionTexts = t('firstSectionTexts' , { returnObjects: true });    
   return (
     <div className={styles.FirstSectionBlock}>
         <div className="container">

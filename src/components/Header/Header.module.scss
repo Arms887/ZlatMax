@@ -1,0 +1,283 @@
+.hamburger {
+    display: none;
+    
+}
+
+.logoMedia {
+    display: none;
+    background-color: #ECF1F2;
+    padding: 14px 0;
+}
+
+.headerInformation {
+    padding: 25px 0;
+    background-color: #141414;
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .menu ul {
+        display: flex;
+        gap: 60px;
+        align-items: center;
+
+        a {
+            color: #fff;
+        }
+    }
+}
+
+.PersonalAccount a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    img {
+        width: 20px;
+    }
+
+    span {
+        color: #fff;
+        font-size: 18px;
+    }
+}
+
+.headerMedia {
+    display: none;
+}
+
+.headerLogoAddres {
+    padding: 22px 0;
+    background-color: #ECF1F2;
+}
+
+.QuantityySizeParent {
+    position: relative;
+}
+
+.QuantityySIze {
+    position: absolute;
+    background-color: #E8AA31;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    left: 22px;
+    top: 0;
+    text-align: center;
+
+    span {
+        display: block;
+        font-size: 10px;
+    }
+}
+
+.headerInformationMediaIcons {
+
+    display: none !important;
+}
+
+
+
+.headerLogoAddresChild {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .headerLogoAddresChildLeft {
+        display: flex;
+        align-items: center;
+        gap: 58px;
+
+        input {
+            padding: 15px 50px 15px 20px;
+            outline: 0;
+            border: 1px solid #00000077;
+            border-radius: 3px;
+            color: #00000077;
+            background-color: transparent;
+            font-weight: 500;
+            font-size: 14px;
+
+            ::placeholder {
+                color: #00000077;
+                font-weight: 500;
+                font-size: 14px;
+
+                ::before {
+                    content: "\f002";
+                }
+            }
+        }
+    }
+
+
+
+    .headerLogoAddresChildRight {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+
+        button {
+            background-color: transparent;
+            outline: 0;
+            border: 0;
+            cursor: pointer;
+        }
+
+        .city {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            img {
+                width: 17px;
+            }
+
+            span {
+                font-weight: 600;
+                font-size: 18x;
+                color: #000;
+            }
+        }
+
+        .number {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+
+            img {
+                width: 17px;
+                margin-top: 7px;
+            }
+
+            span {
+                font-weight: 600;
+                font-size: 18x;
+                color: #000;
+            }
+
+            h6 {
+                font-weight: 700;
+                font-size: 18x;
+                color: #E8AA31;
+            }
+        }
+
+        .basket {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            position: relative;
+
+
+            img {
+                width: 35px;
+            }
+
+
+        }
+
+        .basketQuantityy {
+            span {
+                font-weight: 500;
+                font-size: 16x;
+                color: #000;
+            }
+
+            h6 {
+                font-weight: 500;
+                font-size: 16x;
+                color: #E8AA31;
+            }
+        }
+    }
+}
+
+
+// media
+
+@media only screen and (max-width: 1200px) {
+    .headerLogoAddresChildLeft {
+        gap: 20px !important;
+    }
+
+    .headerLogoAddresChildRight {
+        gap: 20px !important;
+    }
+
+    .headerLogoAddresChildLeft input {
+        padding: 15px 10px 15px 15px !important;
+        width: 200px;
+    }
+
+    .headerLogoAddresChildLeft img {
+        width: 130px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .headerInformation .navbar {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .logoMedia {
+        display: block;
+    }
+
+    .headerLogoAddres {
+        display: none;
+    }
+
+    .headerContent {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .headerInformationMediaIcons {
+
+        display: block flex !important;
+        gap: 20px;
+    }
+
+    .headerMedia {
+        display: none !important;
+        width: 100%;
+        z-index: 7;
+    }
+
+    .headerMedia.open {
+        display: block !important;
+        background-color: #141414;
+        padding: 81px 20px 100px 20px;
+        width: 30%;
+        min-width: 280px;
+        position: absolute;
+        top: 84px;
+        right: 0;
+
+
+        .headerMediaContent ul {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            text-align: end;
+
+            li a {
+                color: #fff;
+            }
+        }
+    }
+    .hamburger {
+        display: block;
+        position: relative;
+        z-index: 6; 
+    }
+}

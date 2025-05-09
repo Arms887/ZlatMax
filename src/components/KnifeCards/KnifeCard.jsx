@@ -2,7 +2,7 @@ import styles from './KnifeCards.module.scss';
 import { Rate } from 'antd';
 import YellowBtn from '../UI/YellowBtn/YellowBtn';
 import { useState } from "react";
-function KnifeCards({showComparision,btnName,onAddToCart,title, steel, materials, reviews, reviewstext, price, currency, imgsrc }) {
+function KnifeCards({showLikes,showComparision,btnName,onAddToCart,title, steel, materials, reviews, reviewstext, price, currency, imgsrc }) {
   const [isActive, setIsActive] = useState(false);
   return (
     <div className={styles.knifeCard}>
@@ -32,7 +32,9 @@ function KnifeCards({showComparision,btnName,onAddToCart,title, steel, materials
                   viewBox="0 0 28 25"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  onClick={() => setIsActive(!isActive)}
+                  onClick={() => {
+                    showLikes()
+                    setIsActive(!isActive)}}
                   style={{ cursor: "pointer" }}
                 >
                   <path

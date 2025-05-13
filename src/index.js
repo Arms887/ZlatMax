@@ -9,6 +9,7 @@ import './i18n';
 import { LikeProvider } from './context/LikeContext';
 import { CartProvider } from './context/CartContext';
 import { ComparisonProvider } from './context/Comparison';
+import './firebase';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

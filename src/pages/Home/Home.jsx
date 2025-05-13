@@ -1,10 +1,10 @@
 import styles from './Home.module.scss';
 import { useTranslation } from 'react-i18next';
-import { Row, Col, Button, Drawer, List, Modal, message } from 'antd';
+import { useComparison } from '../../context/Comparison';
+import { Row, Col, Modal, } from 'antd';
 import Section2Cards from '../../components/Section2Cards/Section2Cards';
 import Zagolovok from '../../components/Zagolovok/Zagolovok';
 import LittleCard from '../../components/LittleCard/LittleCard';
-import { useState, useMemo, useEffect } from 'react';
 import SliderMy from '../../components/Slider/Slider';
 import OtherSection from '../../components/OtherSection/OtherSection';
 import './../../i18n';
@@ -13,7 +13,7 @@ import MenuBar from '../../components/menuBar/menuBar';
 import FirstSection from '../../components/FirstSection/FirstSection'
 import LightLittleCard from '../../components/LightLitlleCard/LightLittleCard';
 function Home() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const cards = t('cards', { returnObjects: true });
   const knifecardarr = t('knifecards', { returnObjects: true });
   const littlecards = t('littleCards', { returnObjects: true });
@@ -23,205 +23,27 @@ function Home() {
   const lights = t('lights', { returnObjects: true });
   const buttontext = t('btntext');
   const lightLitlleCard = t('lightLittleCards', { returnObjects: true });
-  const changeLanguage = (lng) => {
-    i18n.changeLanguage(lng);
-  };
-  const [messageApi, contextHolder] = message.useMessage();
-  const [cartVisible, setCartVisible] = useState(false);
-  const [likesVisible, setLikesVisible] = useState(false);
-  const success = (success) => {
-    messageApi.open({
-      type: 'success',
-      content: success,
-    });
-  };
-  const error = (error) => {
-    messageApi.open({
-      type: 'error',
-      content: error,
-    });
-  };
-  const warning = (remove) => {
-    messageApi.open({
-      type: 'warning',
-      content: remove,
-    });
-  };
-  const [cart, setCart] = useState(() => {
-    const storedCart = localStorage.getItem('cart');
-    return storedCart ? JSON.parse(storedCart) : [];
-  });
-  
-  function handleAddToCart(itemId) {
-    if (!cart.includes(itemId)) {
-      const updatedCart = [...cart, itemId];
-      setCart(updatedCart);
-      localStorage.setItem('cart', JSON.stringify(updatedCart));
-      success(t('add'));
-    } else {
-      error(t('adderror'));
-    }
-  }
-  const handleRemoveFromCart = (itemId) => {
-    const updatedCart = cart.filter((id) => id !== itemId);
-    setCart(updatedCart);
-    localStorage.setItem('cart', JSON.stringify(updatedCart)); 
-    warning(t('remove')); 
-  };
-  // Comparison
-  const [comparison, setComparison] = useState([]);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const comparisonFunction = (itemId) => {
-    setComparison((prev) => {
-      if (prev.includes(itemId)) return prev;
-      if (prev.length < 2) return [...prev, itemId];
-      return prev;
-    });
-  };
-  useEffect(() => {
-    if (comparison.length === 2) {
-      setIsModalOpen(true);
-    }
-  }, [comparison]);
-
-  const handleClose = () => {
-    setIsModalOpen(false);
-    setComparison([]);
-  };
-
-  // Comparison
-  // const [like, setLike] = useState([]);
-  // function handleAddToLike(itemId) {
-  //   if (!like.includes(itemId)) {
-  //     setLike((prev) => [...prev, itemId]);
-  //     success();
-  //   } else {
-  //     error();
-  //   }
-  // };
-  
-  const [like, setLike] = useState(() => {
-    const storedLikes = localStorage.getItem('likes');
-    return storedLikes ? JSON.parse(storedLikes) : [];
-  });
-  
-  function handleAddToLike(itemId) {
-    if (!like.includes(itemId)) {
-      const updatedLikes = [...like, itemId];
-      setLike(updatedLikes);
-      localStorage.setItem('likes', JSON.stringify(updatedLikes)); 
-      success(t('addToLikes'));
-    } else {
-      error(t('errorLikes'));
-    }
-  }
-
-
-
-  const handleRemoveFromLikes = (itemId) => {
-    const updatedLikes = like.filter((id) => id !== itemId);
-    setLike(updatedLikes);
-    localStorage.setItem('likes', JSON.stringify(updatedLikes)); 
-    warning(t('removeFromLikes')); 
-  };
-
-  const likeItems = useMemo(() => {
-    const combinedLikeItems = [...knifecardarr, ...lights];
-
-    return combinedLikeItems.filter((item) => like.includes(Number(item.id)));
-  }, [like, knifecardarr, lights]);
-
-  const cartItems = useMemo(() => {
-    const combinedItems = [...knifecardarr, ...lights];
-
-    return combinedItems.filter((item) => cart.includes(Number(item.id)));
-  }, [cart, knifecardarr, lights]);
-
-
+const { comparison, isModalOpen, handleClose } = useComparison();
   return (
     <div>
-      {contextHolder}
-      <div className='container'>
-        <button onClick={() => changeLanguage('en')}>English</button>
-        <button onClick={() => changeLanguage('ru')}>Русскый</button>
-        <button onClick={() => changeLanguage('am')}>Հայերեն</button>
-        <Button type="primary" onClick={() => setCartVisible(true)}>
-          Корзина ({cart.length})
-        </Button>
-        <Button type="primary" onClick={() => setLikesVisible(true)}>
-          Likes ({like.length})
-        </Button>
-      </div>
-      <Modal
-        title="Сравнение товаров"
-        open={isModalOpen}
-        onCancel={handleClose}
-        footer={null}
-      >
-        {comparison.map((id) => {
-          const item = [...knifecardarr, ...lights].find((el) => el.id === id);
-          return (
-            <div key={id} style={{ marginBottom: '10px' }}>
-              <h4>{item.title}</h4>
-              <p>Сталь: {item.steel}</p>
-              <p>Материалы: {item.materials}</p>
-              <hr />
-            </div>
-          );
-        })}
-      </Modal>
-      <Drawer
-        title="Корзина"
-        placement="right"
-        onClose={() => setCartVisible(false)}
-        open={cartVisible}
-        width={400}
-      >
-        <List
-          dataSource={cartItems}
-          renderItem={(item) => (
-            <List.Item
-              actions={[
-                <Button type="link" onClick={() => handleRemoveFromCart(item.id)}>
-                  Удалить
-                </Button>,
-              ]}
-            >
-              <List.Item.Meta
-                title={item.title}
-                description={`Цена: ${item.price} ${item.currency}`}
-              />
-            </List.Item>
-          )}
-        />
-        {cartItems.length === 0 && <p>Корзина пуста.</p>}
-      </Drawer>
-      <Drawer
-        title="likes"
-        placement="right"
-        onClose={() => setLikesVisible(false)}
-        open={likesVisible}
-        width={400}
-      >
-        <List
-          dataSource={likeItems}
-          renderItem={(item) => (
-            <List.Item
-              actions={[
-                <Button type="link" onClick={() => handleRemoveFromLikes(item.id)}>
-                  Удалить
-                </Button>,
-              ]}
-            >
-              <List.Item.Meta
-                title={item.title}
-                description={`Цена: ${item.price} ${item.currency}`}
-              />
-            </List.Item>
-          )}
-        />
-        {likeItems.length === 0 && <p>Корзина пуста.</p>}
-      </Drawer>
+       <Modal
+      title="Сравнение товаров"
+      open={isModalOpen}
+      onCancel={handleClose}
+      footer={null}
+    >
+      {comparison.map((id) => {
+        const item = [...knifecardarr, ...lights].find((el) => el.id === id);
+        return (
+          <div key={id} style={{ marginBottom: '10px' }}>
+            <h4>{item?.title}</h4>
+            <p>Сталь: {item?.steel}</p>
+            <p>Материалы: {item?.materials}</p>
+            <hr />
+          </div>
+        );
+      })}
+    </Modal>
       <MenuBar />
       <section>
         <FirstSection />
@@ -243,11 +65,11 @@ function Home() {
             </Row></div>
             <div>
               <Zagolovok title={heading.title2} linkText={heading.href} />
-              <SliderMy btnName={buttontext} importedarr={knifecardarr} slidesToShow={4} showLikes={handleAddToLike} showFunction={handleAddToCart} showComparision={comparisonFunction} />
+              <SliderMy btnName={buttontext} importedarr={knifecardarr} slidesToShow={4}   />
             </div>
           </div>
         </div>
-        <OtherSection btnName={buttontext} content={otherSection} cardsContent={knifecardarr} sliderSettings={3} showLikes={handleAddToLike} showFunction={handleAddToCart} showComparision={comparisonFunction} />
+        <OtherSection btnName={buttontext} content={otherSection} cardsContent={knifecardarr} sliderSettings={3}   />
       </section>
       <section className={styles.sectionFour}>
         <div className={styles.sectionFourMainBlock}>
@@ -255,12 +77,12 @@ function Home() {
             <div className={styles.sectionFourContent}>
               <div>
                 <Zagolovok title={heading.title} linkText={heading.href} />
-                <SliderMy btnName={buttontext} importedarr={knifecardarr} slidesToShow={4} showLikes={handleAddToLike} showComparision={comparisonFunction} showFunction={handleAddToCart} /></div>
+                <SliderMy btnName={buttontext} importedarr={knifecardarr} slidesToShow={4}   /></div>
               <div><Zagolovok title={heading.title} linkText={heading.href} />
-                <SliderMy btnName={buttontext} importedarr={knifecardarr} slidesToShow={4} showLikes={handleAddToLike} showComparision={comparisonFunction} showFunction={handleAddToCart} /></div>
+                <SliderMy btnName={buttontext} importedarr={knifecardarr} slidesToShow={4}   /></div>
             </div>
           </div>
-          <OtherSection btnName={buttontext} content={otherSection} cardsContent={knifecardarr} sliderSettings={3} showFunction={handleAddToCart} showComparision={comparisonFunction} />
+          <OtherSection btnName={buttontext} content={otherSection} cardsContent={knifecardarr} sliderSettings={3}  />
         </div>
       </section>
       <section className={styles.sectionSix}>
@@ -269,9 +91,9 @@ function Home() {
             <div className={styles.sectionSixContent}>
               <div>
                 <Zagolovok title={heading.title} linkText={heading.href} />
-                <SliderMy btnName={buttontext} importedarr={knifecardarr} slidesToShow={4} showLikes={handleAddToLike} showFunction={handleAddToCart} /></div>
+                <SliderMy btnName={buttontext} importedarr={knifecardarr} slidesToShow={4}   /></div>
               <div><Zagolovok title={heading.title} linkText={heading.href} />
-                <SliderMy btnName={buttontext} importedarr={knifecardarr} slidesToShow={4} showLikes={handleAddToLike} showFunction={handleAddToCart} /></div>
+                <SliderMy btnName={buttontext} importedarr={knifecardarr} slidesToShow={4}   /></div>
               <div>
                 <Zagolovok title={"Наши статьи"} linkText={"Перейти в каталог"} />
               </div>
@@ -307,7 +129,7 @@ function Home() {
                   </Row>
                 </div>
                 <Zagolovok title={heading.title3} linkText={heading.href} />
-                <SliderMy btnName={buttontext} importedarr={lights} slidesToShow={4} showLikes={handleAddToLike} showFunction={handleAddToCart} />
+                <SliderMy btnName={buttontext} importedarr={lights} slidesToShow={4}   />
               </div>
             </div>
           </div>

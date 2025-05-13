@@ -2,14 +2,26 @@ import styles from './KnifeCards.module.scss';
 import { Rate } from 'antd';
 import YellowBtn from '../UI/YellowBtn/YellowBtn';
 import { useState } from "react";
-function KnifeCards({showLikes,showComparision,btnName,onAddToCart,title, steel, materials, reviews, reviewstext, price, currency, imgsrc }) {
+import { useLikes } from '../../context/LikeContext';
+import { useComparison } from '../../context/Comparison';
+import { Link } from 'react-router-dom';
+function KnifeCards({ itemId, btnName, title, steel, materials, reviews, reviewstext, price, currency, imgsrc }) {
   const [isActive, setIsActive] = useState(false);
+  const { addLike, removeLike, isLiked } = useLikes();
+  const { comparisonFunction } = useComparison();
+  const handleClick = () => {
+    if (isLiked(itemId)) {
+      removeLike(itemId);
+    } else {
+      addLike(itemId);
+    }
+  };
   return (
     <div className={styles.knifeCard}>
       <div className={styles.knifeCardsContent}>
         <div className={styles.knifeCardText}>
           <img className={styles.knife} src={imgsrc} alt={title} />
-          <h4>{title}</h4>
+          <Link to={`/user/${itemId}`}><h4>{title}</h4></Link>
           <div className={styles.size}>
             <p>{steel}</p>
             <p>{materials}</p>
@@ -23,7 +35,7 @@ function KnifeCards({showLikes,showComparision,btnName,onAddToCart,title, steel,
             <div className={styles.cardPrice}>
               <h4>{price}<span>{currency}</span></h4>
               <div className={styles.cardScale}>
-                <button onClick={showComparision}>
+                <button onClick={() => comparisonFunction(itemId)}>
                   <img src="./../assets/img/Vector (22).png" alt="nema" />
                 </button>
                 <svg
@@ -33,8 +45,9 @@ function KnifeCards({showLikes,showComparision,btnName,onAddToCart,title, steel,
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                   onClick={() => {
-                    showLikes()
-                    setIsActive(!isActive)}}
+                    handleClick()
+                    setIsActive(!isActive)
+                  }}
                   style={{ cursor: "pointer" }}
                 >
                   <path
@@ -47,37 +60,37 @@ function KnifeCards({showLikes,showComparision,btnName,onAddToCart,title, steel,
           </div>
 
         </div>
-        
-          <YellowBtn
-          onClick={onAddToCart}
-            btnName={btnName}
-            icon={
-              <svg
-                width="19"
-                height="19"
-                viewBox="0 0 19 19"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M4.14005 4.42146H16.6916C17.3507 4.42146 17.8296 5.04797 17.6565 5.68396L16.9778 8.17874C16.6225 9.48483 15.4366 10.3912 14.0831 10.3912H5.24054M0 1H2.00252C2.97824 1 3.81154 1.70406 3.97445 2.66608L5.47496 11.5273C5.63787 12.4893 6.47118 13.1934 7.44689 13.1934H16.3759"
-                  stroke="white"
-                  strokeWidth="1.5"
-                />
-                <path
-                  d="M7.87915 15.7791C8.42837 15.7792 8.84096 16.2086 8.84106 16.699C8.84106 17.1894 8.42844 17.6187 7.87915 17.6189C7.32969 17.6189 6.91626 17.1895 6.91626 16.699C6.91637 16.2085 7.32976 15.7791 7.87915 15.7791Z"
-                  stroke="white"
-                  strokeWidth="1.5"
-                />
-                <path
-                  d="M15.4146 15.7791C15.9638 15.7792 16.3764 16.2086 16.3765 16.699C16.3765 17.1894 15.9638 17.6187 15.4146 17.6189C14.8651 17.6189 14.4517 17.1895 14.4517 16.699C14.4518 16.2085 14.8652 15.7791 15.4146 15.7791Z"
-                  stroke="white"
-                  strokeWidth="1.5"
-                />
-              </svg>
-            }
-          />
-       
+
+        <YellowBtn
+          itemId={itemId}
+          btnName={btnName}
+          icon={
+            <svg
+              width="19"
+              height="19"
+              viewBox="0 0 19 19"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4.14005 4.42146H16.6916C17.3507 4.42146 17.8296 5.04797 17.6565 5.68396L16.9778 8.17874C16.6225 9.48483 15.4366 10.3912 14.0831 10.3912H5.24054M0 1H2.00252C2.97824 1 3.81154 1.70406 3.97445 2.66608L5.47496 11.5273C5.63787 12.4893 6.47118 13.1934 7.44689 13.1934H16.3759"
+                stroke="white"
+                strokeWidth="1.5"
+              />
+              <path
+                d="M7.87915 15.7791C8.42837 15.7792 8.84096 16.2086 8.84106 16.699C8.84106 17.1894 8.42844 17.6187 7.87915 17.6189C7.32969 17.6189 6.91626 17.1895 6.91626 16.699C6.91637 16.2085 7.32976 15.7791 7.87915 15.7791Z"
+                stroke="white"
+                strokeWidth="1.5"
+              />
+              <path
+                d="M15.4146 15.7791C15.9638 15.7792 16.3764 16.2086 16.3765 16.699C16.3765 17.1894 15.9638 17.6187 15.4146 17.6189C14.8651 17.6189 14.4517 17.1895 14.4517 16.699C14.4518 16.2085 14.8652 15.7791 15.4146 15.7791Z"
+                stroke="white"
+                strokeWidth="1.5"
+              />
+            </svg>
+          }
+        />
+
       </div>
     </div>
   );

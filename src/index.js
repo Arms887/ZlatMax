@@ -6,11 +6,21 @@ import reportWebVitals from './reportWebVitals';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './i18n';
+import { LikeProvider } from './context/LikeContext';
+import { CartProvider } from './context/CartContext';
+import { ComparisonProvider } from './context/Comparison';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  <ComparisonProvider>
+  <CartProvider>
+  <LikeProvider>
   <React.StrictMode>
     <App />
   </React.StrictMode>
+  </LikeProvider>
+  </CartProvider>
+  </ComparisonProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function

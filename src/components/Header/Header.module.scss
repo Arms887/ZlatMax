@@ -1,3 +1,6 @@
+*{
+    caret-color: transparent;
+}
 .hamburger {
     display: none;
     
@@ -56,6 +59,7 @@
 
 .QuantityySizeParent {
     position: relative;
+    cursor: pointer;
 }
 
 .QuantityySIze {
@@ -171,7 +175,7 @@
             align-items: flex-start;
             gap: 10px;
             position: relative;
-
+cursor: pointer;
 
             img {
                 width: 35px;

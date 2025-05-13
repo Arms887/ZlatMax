@@ -31,6 +31,7 @@ function SliderMy({btnName,importedarr, slidesToShow, showFunction = () => {},sh
         {importedarr.map((item, index) => (
           <div key={index}>
             <KnifeCards
+            itemId={item.id}
             showLikes={() =>showLikes(item.id)}
             btnName={btnName}
               onAddToCart={() => showFunction(item.id)}

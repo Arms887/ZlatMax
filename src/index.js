@@ -9,10 +9,12 @@ import './i18n';
 import { LikeProvider } from './context/LikeContext';
 import { CartProvider } from './context/CartContext';
 import { ComparisonProvider } from './context/Comparison';
+import { LoginProvider } from './context/LoginContext';
 import './firebase';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+   <LoginProvider>
   <ComparisonProvider>
   <CartProvider>
   <LikeProvider>
@@ -22,6 +24,7 @@ root.render(
   </LikeProvider>
   </CartProvider>
   </ComparisonProvider>
+  </LoginProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function

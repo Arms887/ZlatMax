@@ -19,7 +19,7 @@ const firebaseConfig = {
 console.log("ENV CHECK:");
 console.log("API KEY:", process.env.REACT_APP_FIREBASE_API_KEY);
 console.log("PROJECT ID:", process.env.REACT_APP_FIREBASE_PROJECT_ID);
-// Initialize Firebase
+
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const auth = getAuth(app);

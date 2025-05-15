@@ -1,10 +1,13 @@
 import styles from './Header.module.scss';
 import { useState } from 'react';
-import { Button, Drawer, List} from 'antd';
+import { Button, Drawer, List } from 'antd';
 import { MenuOutlined } from '@ant-design/icons';
 import { useTranslation } from 'react-i18next';
 import { useCart } from '../../context/CartContext';
 import { useLikes } from '../../context/LikeContext';
+import { useLogin } from '../../context/LoginContext';
+import LoginModal from '../LoginModal/LoginModal';
+import RegisterModal from '../RegisterModal/RegisterModal';
 import './../../i18n';
 import { Link } from 'react-router-dom';
 function Header() {
@@ -17,14 +20,16 @@ function Header() {
     ) : (
         <MenuOutlined style={{ fontSize: '24px', color: 'white' }} />
     );
- const changeLanguage = (e) => {
-    i18n.changeLanguage(e.target.value);
-  };
+    const changeLanguage = (e) => {
+        i18n.changeLanguage(e.target.value);
+    };
     const { t, i18n } = useTranslation();
-    const { cart, removeFromCart, cartItems,totalPrice} = useCart();
+    const { cart, removeFromCart, cartItems, totalPrice } = useCart();
     const { removeLike, likeItems } = useLikes();
     const [cartVisible, setCartVisible] = useState(false);
     const [likesVisible, setLikesVisible] = useState(false);
+    const { openLogin } = useLogin();
+
     return (
         <header>
 
@@ -110,11 +115,9 @@ function Header() {
                                     </ul>
                                 </nav>
                             </div>
-                            <div className={styles.PersonalAccount}>
-                                <a href="#">
+                            <div className={styles.personalAccount} onClick={() => openLogin()}>     
                                     <img src="./assets/img/headerman.svg" alt={t('header.alt.profile')} />
-                                    <span>{t('header.personal')}</span>
-                                </a>
+                                    <span>{t('header.personal')}</span>        
                             </div>
                         </div>
                         <div className={styles.hamburger}>
@@ -176,6 +179,8 @@ function Header() {
                     </ul>
                 </div>
             </div>
+            <LoginModal />
+            <RegisterModal />
         </header>
     );
 }

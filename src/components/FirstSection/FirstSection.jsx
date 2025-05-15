@@ -1,5 +1,5 @@
 import styles from './FirstSection.module.scss';
-import YellowBtn from '../UI/YellowBtn/YellowBtn';
+import FirstSectionButton from '../UI/FirstSectionButton/FirstSectionButton';
 import InfoComponent from '../InfoComponent/InfoComponent';
 import { useTranslation } from 'react-i18next';
 import { Row, Col } from 'antd';
@@ -14,7 +14,7 @@ function FirstSection() {
 <div className={styles.FirstSectionTexts}>
 <p className={styles.FirstSectionTitle}>{firstSectionTexts.infoCardTitle}<span>{firstSectionTexts.infoCardTitleSpan}</span></p>
     <p className={styles.FirstSectionText}>{firstSectionTexts.infoCardsText}</p>
-<YellowBtn btnName={t('FirstSectionBtn')} />
+<FirstSectionButton btnName={t('FirstSectionBtn')}/>
 </div>
 <img className={styles.FirstSetcionKnifeimg} src="/assets/img/knifemain.png" alt="asdasdasdasdasdsa" />
 <div className={styles.infoCardsBlock}>

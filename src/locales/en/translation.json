@@ -23,32 +23,32 @@
   "littleCards": [
   {
     "cardtext": "All About Knives: How to Choose the Right One",
-    "image": "./assets/img/Rectangle 42.png"
+    "image": "/assets/img/Rectangle 42.png"
   },
   {
     "cardtext": "How to Choose a Flashlight Properly",
-    "image": "./assets/img/Rectangle 43.png"
+    "image": "/assets/img/Rectangle 43.png"
   },
   {
     "cardtext": "Kitchen Knives for Housewives",
-    "image": "./assets/img/Rectangle 44.png"
+    "image": "/assets/img/Rectangle 44.png"
   },
   {
     "cardtext": "Kitchen Knives for Housewives",
-    "image": "./assets/img/Rectangle 45(1).png"
+    "image": "/assets/img/Rectangle 45(1).png"
   }
 ],
 "lightLittleCards": [
   {
     "title": "Tactical Flashlights",
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-    "image": "./assets/img/351 1.png",
+    "image": "/assets/img/351 1.png",
     "btntext": "Read more"
   },
   {
     "title": "Tactical Flashlights",
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-    "image": "./assets/img/fish_fonar 1.png",
+    "image": "/assets/img/fish_fonar 1.png",
     "btntext": "Read more"
   }
 ]
@@ -64,7 +64,7 @@
     "reviewsText": "reviews",
     "price": 5840,
     "currency": "RUB",
-    "image": "./assets/img/01s 1.png"
+    "image": "/assets/img/01s 1.png"
   },
   {
     "id": 2,
@@ -76,7 +76,7 @@
     "reviewsText": "reviews",
     "price": 4790,
     "currency": "RUB",
-    "image": "./assets/img/01s 1.png"
+    "image": "/assets/img/01s 1.png"
   },
   {
     "id": 3,
@@ -88,7 +88,7 @@
     "reviewsText": "reviews",
     "price": 6150,
     "currency": "RUB",
-    "image": "./assets/img/01s 1.png"
+    "image": "/assets/img/01s 1.png"
   },
   {
     "id": 4,
@@ -100,7 +100,7 @@
     "reviewsText": "reviews",
     "price": 2490,
     "currency": "RUB",
-    "image": "./assets/img/01s 1.png"
+    "image": "/assets/img/01s 1.png"
   },
   {
     "id": 5,
@@ -112,7 +112,7 @@
     "reviewsText": "reviews",
     "price": 6990,
     "currency": "RUB",
-    "image": "./assets/img/01s 1.png"
+    "image": "/assets/img/01s 1.png"
   },
   {
     "id": 6,
@@ -124,7 +124,7 @@
     "reviewsText": "reviews",
     "price": 5390,
     "currency": "RUB",
-    "image": "./assets/img/01s 1.png"
+    "image": "/assets/img/01s 1.png"
   }
 ]
 ,  
@@ -139,7 +139,7 @@
     "reviewsText": "reviews",
     "price": 4390,
     "currency": "RUB",
-    "image": "./assets/img/117430435_images_13765658881 1.png"
+    "image": "/assets/img/117430435_images_13765658881 1.png"
   },
   {
     "id": 8,
@@ -151,7 +151,7 @@
     "reviewsText": "reviews",
     "price": 3290,
     "currency": "RUB",
-    "image": "./assets/img/117430435_images_13765658881 1.png"
+    "image": "/assets/img/117430435_images_13765658881 1.png"
   },
   {
     "id": 9,
@@ -163,7 +163,7 @@
     "reviewsText": "reviews",
     "price": 4990,
     "currency": "RUB",
-    "image": "./assets/img/117430435_images_13765658881 1.png"
+    "image": "/assets/img/117430435_images_13765658881 1.png"
   },
   {
     "id": 10,
@@ -175,44 +175,44 @@
     "reviewsText": "reviews",
     "price": 1890,
     "currency": "RUB",
-    "image": "./assets/img/117430435_images_13765658881 1.png"
+    "image": "/assets/img/117430435_images_13765658881 1.png"
   }
 ]
 ,
   "cards": [
   {
     "title": "Knife Catalog",
-    "image": "./assets/img/knife1.png",
+    "image": "/assets/img/knife1.png",
     "items": ["Butchering", "Tourist", "Hunting"],
     "imgClass": "img1"
   },
   {
     "title": "Medium-Blade Weapons",
-    "image": "./assets/img/knife2.png",
+    "image": "/assets/img/knife2.png",
     "items": ["Butchering", "Tourist", "Hunting"],
     "imgClass": "img2"
   },
   {
     "title": "Long-Blade Weapons",
-    "image": "./assets/img/knife3.png",
+    "image": "/assets/img/knife3.png",
     "items": ["Butchering", "Tourist", "Hunting"],
     "imgClass": "img3"
   },
   {
     "title": "Souvenir Products",
-    "image": "./assets/img/knife4.png",
+    "image": "/assets/img/knife4.png",
     "items": ["Butchering", "Tourist", "Hunting"],
     "imgClass": "img4"
   },
   {
     "title": "Accessories",
-    "image": "./assets/img/knife5.png",
+    "image": "/assets/img/knife5.png",
     "items": ["Butchering", "Tourist", "Hunting"],
     "imgClass": "img5"
   },
   {
     "title": "Knife Workshop",
-    "image": "./assets/img/knife6.png",
+    "image": "/assets/img/knife6.png",
     "items": ["Butchering", "Tourist", "Hunting"],
     "imgClass": "img6"
   }

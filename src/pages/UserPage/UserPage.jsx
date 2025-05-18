@@ -34,7 +34,7 @@ function UserPage() {
                     <div className={styles.sectionOneContentCharacteristic}>
                         <div className={styles.sectionOneCharacteristicMain}>
                             <div className={styles.sectionOneCharacteristicTitle}>
-                                <h4>Нож Снегирь</h4>
+                                <h4>{needCard.title}</h4>
                                 <Rate />
                             </div>
                             <div className={styles.sectionOneCharacteristicLike}>
@@ -42,7 +42,9 @@ function UserPage() {
                                 <img src="./assets/img/hearthYellow.svg" alt="" />
                             </div>
                         </div>
-                        <span className={styles.inStock}>В наличии</span>
+                        <span className={styles.inStock}><p className={needCard.isInStock ? styles.available : styles.unavailable}>
+                            {needCard.isInStock ? t('isInStockText') : t('outOfStock')}
+                        </p></span>
                         <div className={styles.line}></div>
                         <div className={styles.productInfo}>
                             <div className={styles.productInfoTitle}>

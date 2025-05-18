@@ -63,7 +63,8 @@
       "reviewsText": "կարծիքներ",
       "price": 5840,
       "currency": "ռուբլի",
-      "image": "./assets/img/01s 1.png"
+      "image": "./assets/img/01s 1.png",
+      "isInStock": false
     },
     {
       "id": 2,
@@ -75,7 +76,8 @@
       "reviewsText": "կարծիքներ",
       "price": 4790,
       "currency": "ռուբլի",
-      "image": "./assets/img/01s 1.png"
+      "image": "./assets/img/01s 1.png",
+      "isInStock": true
     },
     {
       "id": 3,
@@ -87,7 +89,8 @@
       "reviewsText": "կարծիքներ",
       "price": 6150,
       "currency": "ռուբլի",
-      "image": "./assets/img/01s 1.png"
+      "image": "./assets/img/01s 1.png",
+      "isInStock": false
     },
     {
       "id": 4,
@@ -99,7 +102,8 @@
       "reviewsText": "կարծիքներ",
       "price": 2490,
       "currency": "ռուբլի",
-      "image": "./assets/img/01s 1.png"
+      "image": "./assets/img/01s 1.png",
+      "isInStock": false
     },
     {
       "id": 5,
@@ -111,7 +115,8 @@
       "reviewsText": "կարծիքներ",
       "price": 6990,
       "currency": "ռուբլի",
-      "image": "./assets/img/01s 1.png"
+      "image": "./assets/img/01s 1.png",
+      "isInStock": false
     },
     {
       "id": 6,
@@ -123,7 +128,8 @@
       "reviewsText": "կարծիքներ",
       "price": 5390,
       "currency": "ռուբլի",
-      "image": "./assets/img/01s 1.png"
+      "image": "./assets/img/01s 1.png",
+      "isInStock": true
     }
   ],
   "lights": [
@@ -137,7 +143,8 @@
       "reviewsText": "կարծիքներ",
       "price": 4390,
       "currency": "ռուբլի",
-      "image": "./assets/img/117430435_images_13765658881 1.png"
+      "image": "./assets/img/117430435_images_13765658881 1.png",
+      "isInStock": true
     },
     {
       "id": 8,
@@ -149,7 +156,8 @@
       "reviewsText": "կարծիքներ",
       "price": 3290,
       "currency": "ռուբլի",
-      "image": "./assets/img/117430435_images_13765658881 1.png"
+      "image": "./assets/img/117430435_images_13765658881 1.png",
+      "isInStock": false
     },
     {
       "id": 9,
@@ -161,7 +169,8 @@
       "reviewsText": "կարծիքներ",
       "price": 4990,
       "currency": "ռուբլի",
-      "image": "./assets/img/117430435_images_13765658881 1.png"
+      "image": "./assets/img/117430435_images_13765658881 1.png",
+      "isInStock": true
     },
     {
       "id": 10,
@@ -173,7 +182,8 @@
       "reviewsText": "կարծիքներ",
       "price": 1890,
       "currency": "ռուբլի",
-      "image": "./assets/img/117430435_images_13765658881 1.png"
+      "image": "./assets/img/117430435_images_13765658881 1.png",
+      "isInStock": true
     }
   ],
   "cards": [
@@ -419,5 +429,7 @@
     "infoCardTitleSpan": "Զլատոուստի դանակների",
     "infoCardsText": "Բարի գալուստ «ԶԼԱՏՄԱԿՍ» պաշտոնական կայք: Մեր խանութում ներկայացված է Զլատոուստի դանակների ամենալայն ընտրանին՝ Զլատոուստի զինագործական գործարաններից և ընկերություններից: Մենք պաշտոնական մատակարար ենք։"
   },
-  "FirstSectionBtn": "Ավելին"
+  "FirstSectionBtn": "Ավելին",
+  "isInStockText": "Առկա է",
+  "outOfStock": "Բացակայում է"
 }

@@ -64,7 +64,8 @@
     "reviewsText": "reviews",
     "price": 5840,
     "currency": "RUB",
-    "image": "/assets/img/01s 1.png"
+    "image": "/assets/img/01s 1.png",
+          "isInStock": false
   },
   {
     "id": 2,
@@ -76,7 +77,8 @@
     "reviewsText": "reviews",
     "price": 4790,
     "currency": "RUB",
-    "image": "/assets/img/01s 1.png"
+    "image": "/assets/img/01s 1.png",
+          "isInStock": true
   },
   {
     "id": 3,
@@ -88,7 +90,8 @@
     "reviewsText": "reviews",
     "price": 6150,
     "currency": "RUB",
-    "image": "/assets/img/01s 1.png"
+    "image": "/assets/img/01s 1.png",
+          "isInStock": false
   },
   {
     "id": 4,
@@ -100,7 +103,8 @@
     "reviewsText": "reviews",
     "price": 2490,
     "currency": "RUB",
-    "image": "/assets/img/01s 1.png"
+    "image": "/assets/img/01s 1.png",
+          "isInStock": false
   },
   {
     "id": 5,
@@ -112,7 +116,8 @@
     "reviewsText": "reviews",
     "price": 6990,
     "currency": "RUB",
-    "image": "/assets/img/01s 1.png"
+    "image": "/assets/img/01s 1.png",
+          "isInStock": false
   },
   {
     "id": 6,
@@ -124,7 +129,8 @@
     "reviewsText": "reviews",
     "price": 5390,
     "currency": "RUB",
-    "image": "/assets/img/01s 1.png"
+    "image": "/assets/img/01s 1.png",
+          "isInStock": true
   }
 ]
 ,  
@@ -139,7 +145,8 @@
     "reviewsText": "reviews",
     "price": 4390,
     "currency": "RUB",
-    "image": "/assets/img/117430435_images_13765658881 1.png"
+    "image": "/assets/img/117430435_images_13765658881 1.png",
+          "isInStock":true
   },
   {
     "id": 8,
@@ -151,7 +158,8 @@
     "reviewsText": "reviews",
     "price": 3290,
     "currency": "RUB",
-    "image": "/assets/img/117430435_images_13765658881 1.png"
+    "image": "/assets/img/117430435_images_13765658881 1.png",
+          "isInStock": false
   },
   {
     "id": 9,
@@ -163,7 +171,8 @@
     "reviewsText": "reviews",
     "price": 4990,
     "currency": "RUB",
-    "image": "/assets/img/117430435_images_13765658881 1.png"
+    "image": "/assets/img/117430435_images_13765658881 1.png",
+          "isInStock": true
   },
   {
     "id": 10,
@@ -175,7 +184,8 @@
     "reviewsText": "reviews",
     "price": 1890,
     "currency": "RUB",
-    "image": "/assets/img/117430435_images_13765658881 1.png"
+    "image": "/assets/img/117430435_images_13765658881 1.png",
+          "isInStock": true
   }
 ]
 ,
@@ -386,6 +396,9 @@
   "infoCardTitleSpan": "Zlatoust knives",
   "infoCardsText": "Welcome to the official website of ZLATMAX! Our store offers the widest selection of Zlatoust knives from Zlatoust weapon factories and companies. We are official suppliers."
 },
-"FirstSectionBtn":"More"
+"FirstSectionBtn":"More",
+  "isInStockText": "In stock",
+  "outOfStock": "Out of stock"
+
   }
   

@@ -107,7 +107,7 @@ function Header() {
                                         <li><a href="#">{t('header.payment')}</a></li>
                                         <li><a href="#">{t('header.news')}</a></li>
                                         <li><a href="#">{t('header.contacts')}</a></li>
-                                        <li> <select onChange={changeLanguage} defaultValue={i18n.language}>
+                                        <li> <select className={styles.selectLanguage} onChange={changeLanguage} defaultValue={i18n.language}>
                                             <option value="en">🇺🇸</option>
                                             <option value="ru">🇷🇺</option>
                                             <option value="am">🇦🇲</option>

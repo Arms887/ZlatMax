@@ -63,7 +63,8 @@
       "reviewsText": "отзывов",
       "price": 5840,
       "currency": "рублей",
-      "image": "./assets/img/01s 1.png"
+      "image": "./assets/img/01s 1.png",
+      "isInStock": false
     },
     {
       "id": 2,
@@ -76,6 +77,8 @@
       "price": 4790,
       "currency": "рублей",
       "image": "./assets/img/01s 1.png"
+      ,
+      "isInStock": true
     },
     {
       "id": 3,
@@ -88,6 +91,8 @@
       "price": 6150,
       "currency": "рублей",
       "image": "./assets/img/01s 1.png"
+      ,
+      "isInStock": false
     },
     {
       "id": 4,
@@ -100,6 +105,8 @@
       "price": 2490,
       "currency": "рублей",
       "image": "./assets/img/01s 1.png"
+      ,
+      "isInStock": false
     },
     {
       "id": 5,
@@ -112,6 +119,8 @@
       "price": 6990,
       "currency": "рублей",
       "image": "./assets/img/01s 1.png"
+      ,
+      "isInStock":false
     },
     {
       "id": 6,
@@ -124,6 +133,8 @@
       "price": 5390,
       "currency": "рублей",
       "image": "./assets/img/01s 1.png"
+      ,
+      "isInStock": true
     }
   ],
   "lights": [
@@ -138,6 +149,8 @@
       "price": 4390,
       "currency": "руб.",
       "image": "./assets/img/117430435_images_13765658881 1.png"
+      ,
+      "isInStock": true
     },
     {
       "id": 8,
@@ -150,6 +163,8 @@
       "price": 3290,
       "currency": "руб.",
       "image": "./assets/img/117430435_images_13765658881 1.png"
+      ,
+      "isInStock": false
     },
     {
       "id": 9,
@@ -162,6 +177,8 @@
       "price": 4990,
       "currency": "руб.",
       "image": "./assets/img/117430435_images_13765658881 1.png"
+      ,
+      "isInStock": true
     },
     {
       "id": 10,
@@ -174,6 +191,8 @@
       "price": 1890,
       "currency": "руб.",
       "image": "./assets/img/117430435_images_13765658881 1.png"
+      ,
+      "isInStock": true
     }
   ],
   "cards": [
@@ -419,5 +438,7 @@
     "infoCardTitleSpan": "златоустовских ножей",
     "infoCardsText":"Добро пожаловать на официальный сайт «ЗЛАТМАКС»! В нашем магазине представлен наиболее широкий выбор Златоустовских ножей от Златоустовских Оружейных Фабрик и компаний, мы являемся официальными поставщиками."
   },
-  "FirstSectionBtn":"Подробнее"
+  "FirstSectionBtn":"Подробнее",
+  "isInStockText": "Есть в наличии",
+  "outOfStock": "Нет в наличии"  
 }

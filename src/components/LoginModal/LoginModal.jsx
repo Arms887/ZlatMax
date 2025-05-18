@@ -3,7 +3,10 @@ import styles from './LoginModal.module.scss';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../../firebase';
 import { useLogin } from '../../context/LoginContext';
+import { useNavigate } from 'react-router-dom';
+
 function LoginModal() {
+  const navigate = useNavigate();
   const { isLoginOpen, closeLogin,openRegister} = useLogin();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -16,10 +19,11 @@ function LoginModal() {
     setError('');
     try {
       await signInWithEmailAndPassword(auth, email, password);
-      alert('Вы вошли в систему!');
+      alert('Hajox mtar sayt!');
       closeLogin();
+      navigate('/');
     } catch {
-      setError('Неверный логин или пароль');
+      setError('Sxal parol kam login');
     }
   };
 

@@ -65,10 +65,16 @@
     gap: 20px;
 }
 
-.inStock {
-    color: #24AD53;
-}
+// .inStock {
+//     color: #24AD53;
+// }
 
+.available {
+  color: green;
+}
+.unavailable {
+  color: red;
+}
 .line {
     width: 100%;
     height: 1px;
